@@ -32,6 +32,6 @@ export default create({
   inputBorderRadius: 4,
 
   brandTitle: 'Kitsu UI',
-  brandUrl: 'https://components.kitsu.io',
-  brandImage: 'https://kitsu.io/svg/kitsu-ui-logo.svg',
+  brandUrl: 'https://components.kitsu.app',
+  brandImage: 'https://kitsu.app/svg/kitsu-ui-logo.svg',
 });

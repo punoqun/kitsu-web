@@ -2560,7 +2560,7 @@
     "description": "settings -> imports -> entries"
   },
   "settings.imports.error": {
-    "message": "Sembla que la teva importació ha fallat :( &mdash; Volem solucionar-ho, per la qual cosa et demanem ens escriguis un '<a href=\"mailto:help@kitsu.io\">'correu'</a>' (en anglès).",
+    "message": "Sembla que la teva importació ha fallat :( &mdash; Volem solucionar-ho, per la qual cosa et demanem ens escriguis un '<a href=\"mailto:help@kitsu.app\">'correu'</a>' (en anglès).",
     "description": "settings -> imports -> error"
   },
   "settings.imports.more": {

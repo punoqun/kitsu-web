@@ -2560,7 +2560,7 @@
     "description": "settings -> imports -> entries"
   },
   "settings.imports.error": {
-    "message": "Pare che la tua importazione non sia riuscita :( &mdash; Vogliamo correggere questo problema per te, quindi ti preghiamo di '<a href=\"mailto:help@kitsu.io\">'inviarci un'email'</a>'.",
+    "message": "Pare che la tua importazione non sia riuscita :( &mdash; Vogliamo correggere questo problema per te, quindi ti preghiamo di '<a href=\"mailto:help@kitsu.app\">'inviarci un'email'</a>'.",
     "description": "settings -> imports -> error"
   },
   "settings.imports.more": {

@@ -56,7 +56,7 @@ export const InvalidEmail = {
           icon: BsExclamationCircle,
           message: 'There is already an account with this email.',
         }}
-        defaultValue="nuck@kitsu.io"
+        defaultValue="nuck@kitsu.app"
         {...args}
       />
     );

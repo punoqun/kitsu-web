@@ -8,7 +8,7 @@ vi.mock('app/constants/config');
 
 describe('loginWithRefreshToken', () => {
   test('with successful response', async () => {
-    fetchMock.post('https://kitsu.io/api/oauth/token', {
+    fetchMock.post('https://kitsu.app/api/oauth/token', {
       status: 200,
       body: {
         access_token: 'TOKEN',

@@ -2560,7 +2560,7 @@
     "description": "settings -> imports -> entries"
   },
   "settings.imports.error": {
-    "message": "Det ser ut som din import mislyktes :( &mdash; Vi vil gjerne hjelpe deg å fikse dette. Vennligst send oss en '<a href=\"mailto:help@kitsu.io\">'email'</a>' om problemet.",
+    "message": "Det ser ut som din import mislyktes :( &mdash; Vi vil gjerne hjelpe deg å fikse dette. Vennligst send oss en '<a href=\"mailto:help@kitsu.app\">'email'</a>' om problemet.",
     "description": "settings -> imports -> error"
   },
   "settings.imports.more": {

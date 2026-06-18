@@ -2560,7 +2560,7 @@
     "description": "settings -> imports -> entries"
   },
   "settings.imports.error": {
-    "message": "Sepertinya impor telah gagal :( &mdash; Kami ingin memperbaiki ini untukmu, tolong kirim '<a href=\"mailto:help@kitsu.io\">'email'</a>' kepada kami.",
+    "message": "Sepertinya impor telah gagal :( &mdash; Kami ingin memperbaiki ini untukmu, tolong kirim '<a href=\"mailto:help@kitsu.app\">'email'</a>' kepada kami.",
     "description": "settings -> imports -> error"
   },
   "settings.imports.more": {

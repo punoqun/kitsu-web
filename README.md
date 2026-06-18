@@ -39,9 +39,9 @@ After you have Node, run the following:
 
 Now visit `http://localhost:3000` and you should see the Kitsu application!
 
-> By default, in development mode, this will connect to `staging.kitsu.io` (our pre-production
+> By default, in development mode, this will connect to `staging.kitsu.app` (our pre-production
 > environment) for the API, which means anything you do will be wiped out weekly. You can change
-> this to connect to production if necessary by setting `VITE_API_HOST=https://kitsu.io/` in the
+> this to connect to production if necessary by setting `VITE_API_HOST=https://kitsu.app/` in the
 > `.env` file. This is generally not necessary, but there are some things which don't work fully in
 > staging.
 >
@@ -162,5 +162,5 @@ documentation](https://formatjs.io/docs/icu-syntax/).
 
 ## Issues
 
-Looking to create an issue? Open a [bug report](https://kitsu.io/feedback/bugs) or [feature
-request](https://kitsu.io/feedback/feature-requests) on Kitsu.
+Looking to create an issue? Open a [bug report](https://kitsu.app/feedback/bugs) or [feature
+request](https://kitsu.app/feedback/feature-requests) on Kitsu.

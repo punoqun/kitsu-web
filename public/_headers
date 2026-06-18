@@ -1,7 +1,7 @@
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'self'; object-src 'none'; img-src https:; font-src fonts.gstatic.com; style-src 'self' fonts.googleapis.com; connect-src 'self' kitsu.io
+  Content-Security-Policy: default-src 'self'; object-src 'none'; img-src https:; font-src fonts.gstatic.com; style-src 'self' fonts.googleapis.com; connect-src 'self' kitsu.app
   
 /docs/ui/*
   ! Content-Security-Policy

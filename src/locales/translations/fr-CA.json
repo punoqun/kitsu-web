@@ -2560,7 +2560,7 @@
     "description": "settings -> imports -> entries"
   },
   "settings.imports.error": {
-    "message": "Il semble que l'importation ait échoué :( &mdash; Nous voulons vous apporter notre aide mais nous avons pour cela besoin de la vôtre : envoyez nous un petit mail '<a href=\"mailto:help@kitsu.io\">'ici'</a>'.",
+    "message": "Il semble que l'importation ait échoué :( &mdash; Nous voulons vous apporter notre aide mais nous avons pour cela besoin de la vôtre : envoyez nous un petit mail '<a href=\"mailto:help@kitsu.app\">'ici'</a>'.",
     "description": "settings -> imports -> error"
   },
   "settings.imports.more": {

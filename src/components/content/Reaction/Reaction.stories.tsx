@@ -30,7 +30,7 @@ export const Unliked = {
             {
               height: 100,
               width: 100,
-              url: 'https://media.kitsu.io/users/avatars/52786/medium.jpeg',
+              url: 'https://media.kitsu.app/users/avatars/52786/medium.jpeg',
             },
           ],
         },
@@ -67,7 +67,7 @@ export const Liked = {
             {
               height: 100,
               width: 100,
-              url: 'https://media.kitsu.io/users/avatars/52786/medium.jpeg',
+              url: 'https://media.kitsu.app/users/avatars/52786/medium.jpeg',
             },
           ],
         },

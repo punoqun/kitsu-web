@@ -2,7 +2,7 @@ import { type CodegenConfig } from '@graphql-codegen/cli';
 
 export default {
   schema: {
-    'https://kitsu.io/api/graphql': {
+    'https://kitsu.app/api/graphql': {
       headers: {
         'X-Schema-Visible': 'all',
       },

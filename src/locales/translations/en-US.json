@@ -4163,7 +4163,7 @@
   },
   "settings.imports.error": {
     "description": "settings -> imports -> error",
-    "message": "It seems like your import has failed :( &mdash; We want to get this fixed for you so please '<a href=\"mailto:help@kitsu.io\">'email'</a>' us."
+    "message": "It seems like your import has failed :( &mdash; We want to get this fixed for you so please '<a href=\"mailto:help@kitsu.app\">'email'</a>' us."
   },
   "settings.imports.header": {
     "description": "settings -> imports -> header",

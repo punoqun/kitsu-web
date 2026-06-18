@@ -9,7 +9,7 @@ vi.mock('app/constants/config');
 
 describe('loginWithAssertion', () => {
   test('with successful response', async () => {
-    fetchMock.post('https://kitsu.io/api/oauth/token', {
+    fetchMock.post('https://kitsu.app/api/oauth/token', {
       status: 200,
       body: {
         access_token: 'TOKEN',
@@ -30,7 +30,7 @@ describe('loginWithAssertion', () => {
   });
 
   test('with failed response', async () => {
-    fetchMock.post('https://kitsu.io/api/oauth/token', {
+    fetchMock.post('https://kitsu.app/api/oauth/token', {
       status: 401,
       body: {
         error: 'invalid_grant',
@@ -47,7 +47,7 @@ describe('loginWithAssertion', () => {
   });
 
   test('with a network error', async () => {
-    fetchMock.post('https://kitsu.io/api/oauth/token', {
+    fetchMock.post('https://kitsu.app/api/oauth/token', {
       throws: new TypeError('Network Error'),
     });
 

@@ -2560,7 +2560,7 @@
     "description": "settings -> imports -> entries"
   },
   "settings.imports.error": {
-    "message": "Parece que sua importação falhou :( &mdash; Queremos corrigir isso para você, então por favor mande um '<a href=\"mailto:help@kitsu.io\">'e-mail'</a>' pra gente.",
+    "message": "Parece que sua importação falhou :( &mdash; Queremos corrigir isso para você, então por favor mande um '<a href=\"mailto:help@kitsu.app\">'e-mail'</a>' pra gente.",
     "description": "settings -> imports -> error"
   },
   "settings.imports.more": {
