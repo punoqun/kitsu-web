@@ -16,7 +16,7 @@
     position: sticky;
     flex: none;
     align-self: flex-start;
-    width: 180px;
+    inline-size: 180px;
     /* Sticky it lower on the page, but then reverse that with transforms */
     inset-block-start: calc(15px + 125px + 50px);
     transform: translateY(calc(-15px - 125px));

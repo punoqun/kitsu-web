@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  min-inline-size: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.episodeGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+
+  @media (--large) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.emptyState {
+  padding-block: 16px;
+  padding-inline: 18px;
+  color: var(--grey-5);
+}
+
+.loadMore {
+  align-self: center;
+  margin-block-start: 16px;
+}

@@ -1,6 +1,6 @@
 {
   "singleQuote": true,
-  "jsxBracketSameLine": true,
+  "bracketSameLine": true,
   "plugins": ["@ianvs/prettier-plugin-sort-imports"],
   "importOrder": ["<THIRD_PARTY_MODULES>", "", "^(app|@)/(.*)$", "", "^[./]"],
   "importOrderSeparation": true,

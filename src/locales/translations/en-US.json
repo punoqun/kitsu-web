@@ -3246,17 +3246,161 @@
     "description": "media -> show-posts -> text",
     "message": "Show Posts about {media}"
   },
+  "media.show.characters.empty": {
+    "description": "Empty state shown when an anime has no characters",
+    "message": "No characters have been added yet."
+  },
   "media.show.characters.header": {
     "description": "media -> show -> characters -> header",
     "message": "{title} Characters"
+  },
+  "media.show.characters.role.background": {
+    "description": "Label for a background anime character role",
+    "message": "Background"
+  },
+  "media.show.characters.role.cameo": {
+    "description": "Label for a cameo anime character role",
+    "message": "Cameo"
+  },
+  "media.show.characters.role.main": {
+    "description": "Label for a main anime character role",
+    "message": "Main"
+  },
+  "media.show.characters.role.recurring": {
+    "description": "Label for a recurring or supporting anime character role",
+    "message": "Supporting"
   },
   "media.show.characters.sub-header": {
     "description": "media -> show -> characters -> sub-header",
     "message": "{type, select, anime {The following is a full list of characters and their {language} voice actors for the anime {title}} manga {The following is a full list of characters for the manga {title}} other {}}"
   },
+  "media.show.characters.title": {
+    "description": "Anime characters section title with total count",
+    "message": "Characters ({count})"
+  },
+  "media.show.episode.length": {
+    "description": "Episode runtime in minutes on the detail page",
+    "message": "{length, number} min"
+  },
+  "media.show.episode.navigationLabel": {
+    "description": "Accessible label for episode detail navigation",
+    "message": "Episode navigation"
+  },
+  "media.show.episode.next": {
+    "description": "Link label for the next episode",
+    "message": "Next episode"
+  },
+  "media.show.episode.noDescription": {
+    "description": "Fallback text when an episode has no description",
+    "message": "No description is available for this episode."
+  },
+  "media.show.episode.noThumbnail": {
+    "description": "Fallback text shown when an episode detail page has no thumbnail",
+    "message": "No thumbnail"
+  },
+  "media.show.episode.notFoundMessage": {
+    "description": "Message shown when an anime episode number does not exist",
+    "message": "We could not find episode {number} for this anime."
+  },
+  "media.show.episode.notFoundTitle": {
+    "description": "Title shown when an anime episode number does not exist",
+    "message": "Episode not found"
+  },
+  "media.show.episode.number": {
+    "description": "Episode number label on the episode detail page",
+    "message": "Episode {number}"
+  },
+  "media.show.episode.previous": {
+    "description": "Link label for the previous episode",
+    "message": "Previous episode"
+  },
+  "media.show.episode.thumbnailAlt": {
+    "description": "Alt text for an episode detail image",
+    "message": "Thumbnail for {title}"
+  },
+  "media.show.episodes.card.episodeNumber": {
+    "description": "Episode number badge on an episode card",
+    "message": "Episode {number}"
+  },
+  "media.show.episodes.card.length": {
+    "description": "Episode runtime in minutes",
+    "message": "{length, number} min"
+  },
+  "media.show.episodes.card.noThumbnail": {
+    "description": "Fallback text shown when an episode has no thumbnail",
+    "message": "No thumbnail"
+  },
+  "media.show.episodes.card.thumbnailAlt": {
+    "description": "Alt text for an episode thumbnail image",
+    "message": "Thumbnail for {title}"
+  },
+  "media.show.episodes.empty": {
+    "description": "Empty state message for an anime with no episodes",
+    "message": "No episodes have been added yet."
+  },
+  "media.show.episodes.heading": {
+    "description": "Header for the anime episodes list with total count",
+    "message": "Episodes ({totalCount, number})"
+  },
+  "media.show.episodes.loadMore": {
+    "description": "Button label to load more anime episodes",
+    "message": "Load more episodes"
+  },
+  "media.show.franchise.empty": {
+    "description": "Empty state shown when an anime has no franchise relationships",
+    "message": "No franchise relationships have been added yet."
+  },
   "media.show.franchise.header": {
     "description": "media -> show -> franchise -> header",
     "message": "{title} Franchise"
+  },
+  "media.show.franchise.kind.ADAPTATION": {
+    "description": "media -> show -> franchise -> relationship kind -> adaptations",
+    "message": "Adaptations"
+  },
+  "media.show.franchise.kind.ALTERNATIVE_SETTING": {
+    "description": "media -> show -> franchise -> relationship kind -> alternative settings",
+    "message": "Alternative Settings"
+  },
+  "media.show.franchise.kind.ALTERNATIVE_VERSION": {
+    "description": "media -> show -> franchise -> relationship kind -> alternative versions",
+    "message": "Alternative Versions"
+  },
+  "media.show.franchise.kind.CHARACTER": {
+    "description": "media -> show -> franchise -> relationship kind -> characters",
+    "message": "Characters"
+  },
+  "media.show.franchise.kind.FULL_STORY": {
+    "description": "media -> show -> franchise -> relationship kind -> full stories",
+    "message": "Full Stories"
+  },
+  "media.show.franchise.kind.OTHER": {
+    "description": "media -> show -> franchise -> relationship kind -> other",
+    "message": "Other"
+  },
+  "media.show.franchise.kind.PARENT_STORY": {
+    "description": "media -> show -> franchise -> relationship kind -> parent stories",
+    "message": "Parent Stories"
+  },
+  "media.show.franchise.kind.PREQUEL": {
+    "description": "media -> show -> franchise -> relationship kind -> prequels",
+    "message": "Prequels"
+  },
+  "media.show.franchise.kind.SEQUEL": {
+    "description": "media -> show -> franchise -> relationship kind -> sequels",
+    "message": "Sequels"
+  },
+  "media.show.franchise.kind.SIDE_STORY": {
+    "description": "media -> show -> franchise -> relationship kind -> side stories",
+    "message": "Side Stories"
+  },
+  "media.show.franchise.kind.SPINOFF": {
+    "description": "media -> show -> franchise -> relationship kind -> spin-offs",
+    "message": "Spin-offs"
+  },
+  "media.show.franchise.kind.SUMMARY": {
+    "description": "media -> show -> franchise -> relationship kind -> summaries",
+    "message": "Summaries"
   },
   "media.show.franchise.roles.adaptation": {
     "description": "media -> show -> franchise -> roles -> adaptation",
@@ -3338,6 +3482,30 @@
     "description": "media -> show -> navigation -> units",
     "message": "{type, select, anime {Episodes} manga {Chapters} other {}}"
   },
+  "media.show.quotes.card.empty": {
+    "description": "Empty message shown inside a quote card without quote lines",
+    "message": "No lines are available for this quote."
+  },
+  "media.show.quotes.count": {
+    "description": "Number of anime quotes shown on the quotes tab",
+    "message": "{count, plural, =0 {No quotes} one {# quote} other {# quotes}}"
+  },
+  "media.show.quotes.detail.title": {
+    "description": "Title for an anime quote detail page",
+    "message": "Quote"
+  },
+  "media.show.quotes.empty": {
+    "description": "Empty state shown when an anime has no quotes",
+    "message": "No quotes have been added for this anime yet."
+  },
+  "media.show.quotes.notFound": {
+    "description": "Message shown when a quote id is not found for an anime",
+    "message": "We couldn't find that quote for this anime."
+  },
+  "media.show.quotes.title": {
+    "description": "Title for the anime quotes tab",
+    "message": "Quotes"
+  },
   "media.show.reactions.copy": {
     "description": "media -> show -> reactions -> copy",
     "message": "Copy Link to Reaction"
@@ -3345,6 +3513,14 @@
   "media.show.reactions.delete": {
     "description": "media -> show -> reactions -> delete",
     "message": "Delete Reaction"
+  },
+  "media.show.reactions.empty": {
+    "description": "Empty state shown when an anime has no reactions",
+    "message": "No reactions yet"
+  },
+  "media.show.reactions.loadMore": {
+    "description": "Button label to load more anime reactions",
+    "message": "Load more"
   },
   "media.show.reactions.loading": {
     "description": "media -> show -> reactions -> loading",
@@ -3354,9 +3530,21 @@
     "description": "media -> show -> reactions -> report",
     "message": "Report Reaction"
   },
+  "media.show.reactions.title": {
+    "description": "Header for the anime reactions page with the total reaction count",
+    "message": "Reactions ({count, number})"
+  },
   "media.show.sidebar.watch": {
     "description": "media -> show -> sidebar -> watch",
     "message": "Watch Online"
+  },
+  "media.show.staff.empty": {
+    "description": "Empty state shown when an anime has no staff",
+    "message": "No staff have been added yet."
+  },
+  "media.show.staff.title": {
+    "description": "Anime staff section title with total count",
+    "message": "Staff ({count})"
   },
   "media.show.summary.categories": {
     "description": "media -> show -> summary -> categories",

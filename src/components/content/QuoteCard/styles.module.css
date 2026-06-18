@@ -1,0 +1,79 @@
+.link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:focus-visible {
+  outline: none;
+}
+
+.link:focus-visible .card {
+  outline: 3px solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
+.link:hover .card {
+  border-color: var(--kitsu-purple-3);
+}
+
+.card {
+  padding: 14px;
+  color: var(--grey-7);
+}
+
+.detail {
+  padding: 20px;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+}
+
+.detail .line {
+  gap: 12px;
+}
+
+.avatar {
+  margin-block-start: 2px;
+}
+
+.bubble {
+  min-inline-size: 0;
+}
+
+.speaker {
+  margin-block-end: 4px;
+  color: var(--kitsu-purple-4);
+  font-weight: var(--font-bold);
+  font-size: var(--font-sm);
+  font-family: var(--font-family-headings);
+}
+
+.quoteText {
+  margin: 0;
+  border-radius: var(--radius-medium);
+  background: var(--grey-1);
+  padding: 10px 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.detail .quoteText {
+  font-size: var(--font-me);
+}
+
+.empty {
+  margin: 0;
+  color: var(--grey-5);
+  font-size: var(--font-sm);
+}

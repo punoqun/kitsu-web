@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card:hover .title,
+.card:focus-visible .title {
+  text-decoration: underline;
+}
+
+.card:focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 4px;
+}
+
+.poster {
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+.title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: var(--font-sm);
+  font-weight: var(--font-semi-bold);
+  line-height: 1.3;
+}

@@ -1,0 +1,35 @@
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  min-inline-size: 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: var(--font-xl);
+  font-weight: var(--font-semi-bold);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.emptyState {
+  margin: 0;
+  padding: 16px;
+  border: var(--card-border);
+  border-radius: var(--radius-medium);
+  background: var(--card-background);
+  box-shadow: var(--card-shadow);
+}
