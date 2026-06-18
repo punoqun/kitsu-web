@@ -122,7 +122,7 @@
     "eslint-plugin-storybook": "^10.4.6",
     "eslint-plugin-testing-library": "^7.16.2",
     "fast-glob": "^3.3.3",
-    "fetch-mock": "npm:@gr2m/fetch-mock@9.11.0-pull-request-644.1",
+    "fetch-mock": "^12.6.0",
     "globals": "^17.6.0",
     "happy-dom": "^20.10.6",
     "identity-obj-proxy": "^3.0.0",
