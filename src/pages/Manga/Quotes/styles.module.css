@@ -1,0 +1,42 @@
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-inline-size: 0;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  margin: 0;
+  color: var(--section-header-text-color);
+  font-weight: var(--font-bold);
+  font-size: var(--font-xl);
+  font-family: var(--font-family-headings);
+}
+
+.count {
+  margin: 0;
+  color: var(--grey-5);
+  font-size: var(--font-sm);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+
+  @media (--medium) {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  }
+}
+
+.empty {
+  padding: 20px;
+  color: var(--grey-5);
+}

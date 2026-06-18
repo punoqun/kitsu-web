@@ -2915,6 +2915,9 @@
   "j9Xe+y": {
     "message": "Uh oh, you're lost!"
   },
+  "jq0w1U": {
+    "message": "{count, plural, one {# Chapter} other {# Chapters}}"
+  },
   "k8V5GT": {
     "description": "Action button to mark show as want to watch",
     "message": "Want to Watch"
@@ -3246,6 +3249,74 @@
     "description": "media -> show-posts -> text",
     "message": "Show Posts about {media}"
   },
+  "media.show.chapter.length": {
+    "description": "Chapter length in pages on the detail page",
+    "message": "{length, number} pages"
+  },
+  "media.show.chapter.navigationLabel": {
+    "description": "Accessible label for chapter detail navigation",
+    "message": "Chapter navigation"
+  },
+  "media.show.chapter.next": {
+    "description": "Link label for the next chapter",
+    "message": "Next chapter"
+  },
+  "media.show.chapter.noDescription": {
+    "description": "Fallback text when a chapter has no description",
+    "message": "No description is available for this chapter."
+  },
+  "media.show.chapter.noThumbnail": {
+    "description": "Fallback text shown when a chapter detail page has no thumbnail",
+    "message": "No thumbnail"
+  },
+  "media.show.chapter.notFoundMessage": {
+    "description": "Message shown when a manga chapter number does not exist",
+    "message": "We could not find chapter {number} for this manga."
+  },
+  "media.show.chapter.notFoundTitle": {
+    "description": "Title shown when a manga chapter number does not exist",
+    "message": "Chapter not found"
+  },
+  "media.show.chapter.number": {
+    "description": "Chapter number label on the chapter detail page",
+    "message": "Chapter {number}"
+  },
+  "media.show.chapter.previous": {
+    "description": "Link label for the previous chapter",
+    "message": "Previous chapter"
+  },
+  "media.show.chapter.thumbnailAlt": {
+    "description": "Alt text for a chapter detail image",
+    "message": "Thumbnail for {title}"
+  },
+  "media.show.chapters.card.chapterNumber": {
+    "description": "Chapter number badge on a chapter card",
+    "message": "Chapter {number}"
+  },
+  "media.show.chapters.card.length": {
+    "description": "Chapter length in pages",
+    "message": "{length, number} pages"
+  },
+  "media.show.chapters.card.noThumbnail": {
+    "description": "Fallback text shown when a chapter has no thumbnail",
+    "message": "No thumbnail"
+  },
+  "media.show.chapters.card.thumbnailAlt": {
+    "description": "Alt text for a chapter thumbnail image",
+    "message": "Thumbnail for {title}"
+  },
+  "media.show.chapters.empty": {
+    "description": "Empty state message for a manga with no chapters",
+    "message": "No chapters have been added yet."
+  },
+  "media.show.chapters.heading": {
+    "description": "Header for the manga chapters list with total count",
+    "message": "Chapters ({totalCount, number})"
+  },
+  "media.show.chapters.loadMore": {
+    "description": "Button label to load more manga chapters",
+    "message": "Load more chapters"
+  },
   "media.show.characters.empty": {
     "description": "Empty state shown when an anime has no characters",
     "message": "No characters have been added yet."
@@ -3449,6 +3520,10 @@
   "media.show.franchise.roles.summary": {
     "description": "media -> show -> franchise -> roles -> summary",
     "message": "Summary"
+  },
+  "media.show.navigation.chapters": {
+    "description": "media -> show -> navigation -> chapters",
+    "message": "Chapters"
   },
   "media.show.navigation.characters": {
     "description": "media -> show -> navigation -> characters",

@@ -1,0 +1,29 @@
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-inline-size: 0;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0;
+  color: var(--section-header-text-color);
+  font-weight: var(--font-bold);
+  font-size: var(--font-xl);
+  font-family: var(--font-family-headings);
+}
+
+.quote {
+  max-inline-size: 760px;
+}
+
+.notFound {
+  padding: 20px;
+  color: var(--grey-5);
+}
