@@ -1,16 +1,17 @@
+import { lazy } from 'react';
 import { Route } from 'react-router';
 
-import AnimeCharactersPage from './Characters';
-import AnimeEpisodePage from './Episode';
-import AnimeEpisodesPage from './Episodes';
-import AnimeFranchisePage from './Franchise';
-import AnimeQuotePage from './Quote';
-import AnimeQuotesPage from './Quotes';
-import AnimeReactionsPage from './Reactions';
-import AnimeStaffPage from './Staff';
-import AnimeSummaryPage from './Summary';
-
 export { paths } from './paths';
+
+const AnimeSummaryPage = lazy(() => import('./Summary'));
+const AnimeEpisodesPage = lazy(() => import('./Episodes'));
+const AnimeEpisodePage = lazy(() => import('./Episode'));
+const AnimeCharactersPage = lazy(() => import('./Characters'));
+const AnimeStaffPage = lazy(() => import('./Staff'));
+const AnimeReactionsPage = lazy(() => import('./Reactions'));
+const AnimeFranchisePage = lazy(() => import('./Franchise'));
+const AnimeQuotesPage = lazy(() => import('./Quotes'));
+const AnimeQuotePage = lazy(() => import('./Quote'));
 
 export const pages = (
   <Route path="anime">
