@@ -1,13 +1,13 @@
-import React, { useContext, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { useLocation, useOutlet } from 'react-router-dom';
+import type React from 'react';
+import { createContext, useContext, useState } from 'react';
+import { useLocation, useOutlet } from 'react-router';
 
 import AuthModalHeader from 'app/components/AuthModalHeader';
 import Modal from 'app/components/Modal';
 
 import styles from './styles.module.css';
 
-const AuthModalContext = React.createContext<{
+const AuthModalContext = createContext<{
   email?: string;
   setEmail: (email: string) => void;
 }>({
@@ -18,9 +18,9 @@ export function useAuthModalContext() {
   return useContext(AuthModalContext);
 }
 
-const AuthModal: React.FC<React.ComponentProps<typeof Modal>> = function ({
+const AuthModal = function ({
   displayMode,
-}) {
+}: React.ComponentProps<typeof Modal>) {
   const { state } = useLocation() as {
     state: { email?: string } | undefined;
   };

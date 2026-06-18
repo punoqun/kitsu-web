@@ -1,5 +1,6 @@
 import { memoize } from 'lodash-es';
-import React, { createContext, useContext, useState } from 'react';
+import type React from 'react';
+import { createContext, useContext, useState } from 'react';
 
 import InvariantViolated from '@/errors/InvariantViolated';
 import loginWithRefreshToken from '@/utils/login/withRefreshToken';

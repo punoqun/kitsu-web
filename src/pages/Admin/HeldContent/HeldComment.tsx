@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BsEyeFill, BsTrashFill } from 'react-icons/bs';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 import Avatar from '@/components/content/Avatar';
 import Byline from '@/components/content/Byline';
@@ -76,6 +77,7 @@ type HeldCommentProps = {
 export default function HeldComment(props: HeldCommentProps) {
   const comment = readFragment(HeldCommentFragment, props.comment);
   const [success, setSuccess] = useState(false);
+  const intl = useIntl();
 
   return (
     <Card
@@ -107,7 +109,9 @@ export default function HeldComment(props: HeldCommentProps) {
               comment.moderationScores as Record<string, number>
             }
           />
-          <Tag color="blue">Comment</Tag>
+          <Tag color="blue">
+            {intl.formatMessage({ defaultMessage: 'Comment' })}
+          </Tag>
         </Byline.Right>
       </Byline.Container>
       <div className={styles.Content}>{comment.content}</div>
@@ -123,7 +127,7 @@ export default function HeldComment(props: HeldCommentProps) {
         kind="solid"
         color="red"
         className={styles.DeleteButton}>
-        <BsTrashFill /> Delete
+        <BsTrashFill /> <FormattedMessage defaultMessage="Delete" />
       </MutationButton>
       {/*<Button
         size="medium"
@@ -146,7 +150,7 @@ export default function HeldComment(props: HeldCommentProps) {
         kind="solid"
         color="green"
         className={styles.UnholdButton}>
-        <BsEyeFill /> Unhold
+        <BsEyeFill /> <FormattedMessage defaultMessage="Unhold" />
       </MutationButton>
     </Card>
   );

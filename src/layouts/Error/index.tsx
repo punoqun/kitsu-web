@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import { HeaderSettings } from 'app/contexts/LayoutSettingsContext';
 import Page from 'app/layouts/Page';
@@ -6,12 +6,16 @@ import utilStyles from 'app/styles/utils.module.css';
 
 import styles from './styles.module.css';
 
-const ErrorLayout: React.FC<{
+const ErrorLayout = function ({
+  illustration,
+  title,
+  subtitle,
+}: React.PropsWithChildren<{
   illustration: React.ReactNode;
   title: React.ReactNode;
   subtitle: React.ReactNode;
   search: boolean;
-}> = function ({ illustration, title, subtitle, search }) {
+}>) {
   return (
     <Page loading={false}>
       <HeaderSettings background="opaque" />

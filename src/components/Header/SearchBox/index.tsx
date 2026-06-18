@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import { useId } from 'react';
 import { useIntl } from 'react-intl';
 
 import SearchIcon from '@/assets/icons/search.svg?react';

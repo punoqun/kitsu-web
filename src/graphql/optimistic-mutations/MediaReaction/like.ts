@@ -1,6 +1,6 @@
-import { OptimisticMutationResolver } from '@urql/exchange-graphcache';
+import { type OptimisticMutationResolver } from '@urql/exchange-graphcache';
 
-import { MediaReactionLikeInput } from 'app/graphql/types';
+import { type MediaReactionLikeInput } from 'app/graphql/types';
 
 const like: OptimisticMutationResolver = (
   { input }: { input: MediaReactionLikeInput },

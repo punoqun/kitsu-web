@@ -1,5 +1,4 @@
 import { type Meta, type StoryObj } from '@storybook/react';
-import React from 'react';
 
 import { source as defaultPoster } from 'app/assets/default_poster.jpg?imageSource';
 import ImageStories from 'app/components/content/Image/Image.stories';

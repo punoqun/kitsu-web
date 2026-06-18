@@ -1,4 +1,4 @@
-import { Path, PathBuilder, pathTree } from 'app/utils/routes';
+import { Path, type PathBuilder, pathTree } from 'app/utils/routes';
 
 export const paths = (({ slug, id }: { slug?: string | null; id?: string }) => {
   const path = new Path(`/users/${slug ?? id}`);

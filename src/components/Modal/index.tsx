@@ -1,6 +1,7 @@
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 import * as Dialog from '@radix-ui/react-dialog';
-import React, { DialogHTMLAttributes } from 'react';
+import type React from 'react';
+import { type DialogHTMLAttributes } from 'react';
 import { BsX } from 'react-icons/bs';
 import { useIntl } from 'react-intl';
 
@@ -10,11 +11,15 @@ import useReturnToFn from 'app/hooks/useReturnToFn';
 
 import styles from './styles.module.css';
 
-const PageModal: React.FC<DialogHTMLAttributes<HTMLDialogElement>> = function ({
+type ModalDialogProps = React.PropsWithChildren<
+  DialogHTMLAttributes<HTMLDialogElement>
+>;
+
+const PageModal = function ({
   children,
   className,
   ...args
-}) {
+}: ModalDialogProps) {
   const goBack = useReturnToFn();
   const { formatMessage } = useIntl();
 
@@ -50,51 +55,49 @@ const PageModal: React.FC<DialogHTMLAttributes<HTMLDialogElement>> = function ({
   );
 };
 
-const OverlayModal: React.FC<DialogHTMLAttributes<HTMLDialogElement>> =
-  function ({ children, className }) {
-    const goBack = useReturnToFn();
-    const { formatMessage } = useIntl();
+const OverlayModal = function ({ children, className }: ModalDialogProps) {
+  const goBack = useReturnToFn();
+  const { formatMessage } = useIntl();
 
-    return (
-      <IsModalContextProvider>
-        <Dialog.Root defaultOpen onOpenChange={(isOpen) => isOpen || goBack()}>
-          <Dialog.Overlay asChild>
-            <div
-              onPointerDown={goBack}
-              data-testid="scrim"
-              className={styles.modalContainer}
+  return (
+    <IsModalContextProvider>
+      <Dialog.Root defaultOpen onOpenChange={(isOpen) => isOpen || goBack()}>
+        <Dialog.Overlay asChild>
+          <div
+            onPointerDown={goBack}
+            data-testid="scrim"
+            className={styles.modalContainer}
+          >
+            <Dialog.Content
+              asChild
+              onEscapeKeyDown={() => goBack()}
+              onPointerDownOutside={(e) => e.preventDefault()}
             >
-              <Dialog.Content
-                asChild
-                onEscapeKeyDown={() => goBack()}
-                onPointerDownOutside={(e) => e.preventDefault()}
+              <dialog
+                data-testid="modal"
+                open
+                onPointerDown={(e) => e.stopPropagation()}
+                className={[className, styles.modal].join(' ')}
               >
-                <dialog
-                  data-testid="modal"
-                  open
-                  onPointerDown={(e) => e.stopPropagation()}
-                  className={[className, styles.modal].join(' ')}
-                >
-                  <Dialog.Close className={styles.closeButton}>
-                    <AccessibleIcon
-                      label={formatMessage({
-                        defaultMessage: 'Close',
-                        description:
-                          'Accessibility label for modal close button',
-                      })}
-                    >
-                      <BsX />
-                    </AccessibleIcon>
-                  </Dialog.Close>
-                  {children}
-                </dialog>
-              </Dialog.Content>
-            </div>
-          </Dialog.Overlay>
-        </Dialog.Root>
-      </IsModalContextProvider>
-    );
-  };
+                <Dialog.Close className={styles.closeButton}>
+                  <AccessibleIcon
+                    label={formatMessage({
+                      defaultMessage: 'Close',
+                      description: 'Accessibility label for modal close button',
+                    })}
+                  >
+                    <BsX />
+                  </AccessibleIcon>
+                </Dialog.Close>
+                {children}
+              </dialog>
+            </Dialog.Content>
+          </div>
+        </Dialog.Overlay>
+      </Dialog.Root>
+    </IsModalContextProvider>
+  );
+};
 
 /**
  * A Modal or dialog box component
@@ -106,9 +109,10 @@ const OverlayModal: React.FC<DialogHTMLAttributes<HTMLDialogElement>> =
  *
  * @param {string} displayMode - which style the modal should be displayed in
  */
-const Modal: React.FC<
-  { displayMode: 'modal' | 'page' } & DialogHTMLAttributes<HTMLDialogElement>
-> = function ({ displayMode, ...args }) {
+const Modal = function ({
+  displayMode,
+  ...args
+}: { displayMode: 'modal' | 'page' } & ModalDialogProps) {
   return displayMode === 'modal' ? (
     <OverlayModal {...args} />
   ) : (

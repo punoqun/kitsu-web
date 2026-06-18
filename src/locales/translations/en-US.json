@@ -13,6 +13,9 @@
     "description": "Header for add to library sidebar",
     "message": "Add to Library"
   },
+  "39AHJm": {
+    "message": "Sign Up"
+  },
   "53eNgd": {
     "message": "OVA"
   },
@@ -25,6 +28,9 @@
   },
   "79lLl+": {
     "message": "Music"
+  },
+  "7gMmSL": {
+    "message": "Reaction"
   },
   "8XlI+o": {
     "message": "by <b>{name}</b>"
@@ -55,12 +61,27 @@
   "EiUj76": {
     "message": "Manga"
   },
+  "FS3b54": {
+    "message": "Done!"
+  },
+  "FacQBr": {
+    "message": "Send password reset"
+  },
   "I5otxe": {
     "description": "Accessibility label for modal close button",
     "message": "Close"
   },
+  "JEddDG": {
+    "message": "load more"
+  },
   "JlkfMk": {
     "message": "OEL"
+  },
+  "K3r6DQ": {
+    "message": "Delete"
+  },
+  "LgbKvU": {
+    "message": "Comment"
   },
   "MNhA7R": {
     "message": "{count, plural, one {# Episode} other {# Episodes}}"
@@ -71,6 +92,9 @@
   "NPktLp": {
     "description": "Submit button for Sign In",
     "message": "Log in"
+  },
+  "NfP2Dc": {
+    "message": "Anime"
   },
   "RAnASR": {
     "description": "Header for library entry edit sidebar",
@@ -83,6 +107,12 @@
   "RfnGLg": {
     "description": "Action button to mark book as started",
     "message": "Started Reading"
+  },
+  "TV5gEL": {
+    "message": "Unhold"
+  },
+  "Ub+AGc": {
+    "message": "Sign In"
   },
   "UsvJ1S": {
     "message": "ONA"
@@ -1697,6 +1727,9 @@
   "e3awX5": {
     "message": "Something went wrong, why don't you try that again in a few minutes?"
   },
+  "eKv7yX": {
+    "message": "Post"
+  },
   "errors.accepted": {
     "description": "errors -> accepted",
     "message": "{description} must be accepted"
@@ -2867,6 +2900,9 @@
   "header.user.settings": {
     "description": "Link in user menu to view settings",
     "message": "Settings"
+  },
+  "huqKGl": {
+    "message": "Create account"
   },
   "image-form.help-text": {
     "description": "image-form -> help-text",
@@ -4441,6 +4477,9 @@
     "description": "settings -> privacy -> update",
     "message": "Update Profile"
   },
+  "t20QRC": {
+    "message": "by <b>{author}</b>"
+  },
   "thx7Wo": {
     "message": "TV"
   },
@@ -5573,6 +5612,9 @@
   },
   "wMVcyT": {
     "message": "Doujin"
+  },
+  "xvlEcu": {
+    "message": "{score} Spam"
   },
   "y2T3ju": {
     "description": "Hover text for Apple sign in button",

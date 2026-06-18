@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 import { BsX } from 'react-icons/bs';
 
 import styles from './styles.module.css';

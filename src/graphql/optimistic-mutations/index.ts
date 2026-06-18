@@ -1,4 +1,4 @@
-import { OptimisticMutationConfig } from '@urql/exchange-graphcache';
+import { type OptimisticMutationConfig } from '@urql/exchange-graphcache';
 
 import mediaReaction from './MediaReaction';
 

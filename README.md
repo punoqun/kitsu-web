@@ -55,7 +55,7 @@ in the past, Kitsu is a large application and has more structure than you might 
 
 #### Entry Points
 
-Vite compiles the application starting at an "entry point". In our case, we have four, across three
+Vite compiles the application starting at an "entry point". In our case, we have four, across two
 "build targets":
 
 - **`BUILD_TARGET=client`** — the main Kitsu (V4) web app
@@ -63,8 +63,7 @@ Vite compiles the application starting at an "entry point". In our case, we have
   - [`oauth2-callback.html`](./oauth2-callback.html) — entry point for a callback handler from an
     OAuth2 provider (mostly just delegates to our
     [nanoauth](https://github.com/hummingbird-me/nanoauth)) library.
-- **`BUILD_TARGET=server`** — server-side rendered version of the Kitsu web app
-  - [`server.js`](./server.js) — main entry point for the Kitsu web app
+  - [`qu-embed.html`](./qu-embed.html) — entry point for the standalone embeddable Qu widget.
 - **`BUILD_TARGET=library`** — a library of components from the Kitsu (V4) web app to expose for
   the V3 Ember app during migration.
   - [`src/entry-ember.tsx`](./src/entry-ember.tsx) — the exports which will be accessible from the

@@ -1,7 +1,8 @@
 import { captureException } from '@sentry/react';
 import { type DocumentNode } from 'graphql';
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { BsCheckCircleFill, BsXCircleFill } from 'react-icons/bs';
+import { FormattedMessage } from 'react-intl';
 import { type AnyVariables, type OperationResult } from 'urql';
 
 import Button, { type ButtonProps } from '@/components/controls/Button';
@@ -54,7 +55,7 @@ export default function MutationButton<
       ) : success ? (
         <>
           <BsCheckCircleFill aria-hidden />
-          Done!
+          <FormattedMessage defaultMessage="Done!" />
         </>
       ) : (
         children

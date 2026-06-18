@@ -1,4 +1,5 @@
-import React, { HTMLProps } from 'react';
+import type React from 'react';
+import { type HTMLProps } from 'react';
 
 import styles from './styles.module.css';
 

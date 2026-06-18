@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BsEyeFill, BsTrashFill } from 'react-icons/bs';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 import Avatar from '@/components/content/Avatar';
 import Byline from '@/components/content/Byline';
@@ -77,6 +78,7 @@ type HeldPostProps = {
 export default function HeldPost(props: HeldPostProps) {
   const post = readFragment(HeldPostFragment, props.post);
   const [success, setSuccess] = useState(false);
+  const intl = useIntl();
 
   return (
     <Card
@@ -106,7 +108,7 @@ export default function HeldPost(props: HeldPostProps) {
           <ModerationScoreTag
             moderationScores={post.moderationScores as Record<string, number>}
           />
-          <Tag color="yellow">Post</Tag>
+          <Tag color="yellow">{intl.formatMessage({ defaultMessage: 'Post' })}</Tag>
         </Byline.Right>
       </Byline.Container>
       <div className={styles.Content}>{post.content}</div>
@@ -122,7 +124,7 @@ export default function HeldPost(props: HeldPostProps) {
         kind="solid"
         color="red"
         className={styles.DeleteButton}>
-        <BsTrashFill /> Delete
+        <BsTrashFill /> <FormattedMessage defaultMessage="Delete" />
       </MutationButton>
       {/*<Button
         size="medium"
@@ -145,7 +147,7 @@ export default function HeldPost(props: HeldPostProps) {
         kind="solid"
         color="green"
         className={styles.UnholdButton}>
-        <BsEyeFill /> Unhold
+        <BsEyeFill /> <FormattedMessage defaultMessage="Unhold" />
       </MutationButton>
     </Card>
   );

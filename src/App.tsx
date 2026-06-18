@@ -10,7 +10,7 @@ import ApplicationContext from 'app/contexts';
 
 import { LayoutSettingsContextProvider } from './contexts/LayoutSettingsContext';
 
-const App: React.FC = function ({ children = <Router /> }) {
+const App = function ({ children = <Router /> }: React.PropsWithChildren) {
   return (
     <React.StrictMode>
       <Suspense fallback={null}>

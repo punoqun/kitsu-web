@@ -1,8 +1,9 @@
+import { type Meta, type StoryObj } from '@storybook/react';
 import { BsExclamationCircle, BsShieldCheck } from 'react-icons/bs';
 
 import TextInput from './index';
 
-export default {
+const meta = {
   title: 'Controls/TextInput',
   component: TextInput,
 
@@ -21,13 +22,19 @@ export default {
       expanded: true,
     },
   },
-};
+} satisfies Meta<typeof TextInput>;
+
+export default meta;
+
+type Story = StoryObj<typeof TextInput>;
 
 export const Unfilled = {
+  args: {
+    label: 'Username',
+  },
   render: (args) => {
     return (
       <TextInput
-        label="Username"
         style={{
           width: '400px',
         }}
@@ -41,22 +48,24 @@ export const Unfilled = {
   parameters: {
     layout: 'centered',
   },
-};
+} satisfies Story;
 
 export const InvalidEmail = {
+  args: {
+    defaultValue: 'nuck@kitsu.app',
+    label: 'Email Address',
+    validation: {
+      type: 'invalid',
+      icon: () => <BsExclamationCircle />,
+      message: 'There is already an account with this email.',
+    },
+  },
   render: (args) => {
     return (
       <TextInput
-        label="Email Address"
         style={{
           width: '400px',
         }}
-        validation={{
-          type: 'invalid',
-          icon: BsExclamationCircle,
-          message: 'There is already an account with this email.',
-        }}
-        defaultValue="nuck@kitsu.app"
         {...args}
       />
     );
@@ -67,23 +76,25 @@ export const InvalidEmail = {
   parameters: {
     layout: 'centered',
   },
-};
+} satisfies Story;
 
 export const ValidPassword = {
+  args: {
+    defaultValue: 'correct horse battery staple',
+    label: 'Password',
+    type: 'password',
+    validation: {
+      type: 'valid',
+      icon: () => <BsShieldCheck />,
+      message: "Woah, that's an excellent password!",
+    },
+  },
   render: (args) => {
     return (
       <TextInput
-        label="Password"
         style={{
           width: '400px',
         }}
-        validation={{
-          type: 'valid',
-          icon: BsShieldCheck,
-          message: "Woah, that's an excellent password!",
-        }}
-        type="password"
-        defaultValue="correct horse battery staple"
         {...args}
       />
     );
@@ -94,18 +105,20 @@ export const ValidPassword = {
   parameters: {
     layout: 'centered',
   },
-};
+} satisfies Story;
 
 export const Search = {
+  args: {
+    defaultValue: 'Attack on Titan',
+    label: 'Search for Anime or Manga...',
+    type: 'search',
+  },
   render: (args) => {
     return (
       <TextInput
-        label="Search for Anime or Manga..."
         style={{
           width: '400px',
         }}
-        type="search"
-        defaultValue="Attack on Titan"
         {...args}
       />
     );
@@ -116,18 +129,20 @@ export const Search = {
   parameters: {
     layout: 'centered',
   },
-};
+} satisfies Story;
 
 export const Month = {
+  args: {
+    defaultValue: 'Junuary',
+    label: 'Month',
+    type: 'month',
+  },
   render: (args) => {
     return (
       <TextInput
-        label="Month"
         style={{
           width: '400px',
         }}
-        type="month"
-        defaultValue="Junuary"
         {...args}
       />
     );
@@ -138,4 +153,4 @@ export const Month = {
   parameters: {
     layout: 'centered',
   },
-};
+} satisfies Story;

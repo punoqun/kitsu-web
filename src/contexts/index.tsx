@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import { ToasterContextProvider } from 'app/components/Toaster/Context';
 
@@ -7,7 +7,7 @@ import IntlProvider from './IntlContext';
 import { SessionContextProvider } from './SessionContext';
 import UrqlContextProvider from './UrqlContext';
 
-const ApplicationContext: React.FC = function ({ children }) {
+const ApplicationContext = function ({ children }: React.PropsWithChildren) {
   return (
     <SessionContextProvider>
       <UrqlContextProvider>

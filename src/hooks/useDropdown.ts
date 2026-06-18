@@ -1,4 +1,4 @@
-import { Options } from '@popperjs/core';
+import { type Options } from '@popperjs/core';
 import { useState } from 'react';
 import { usePopper } from 'react-popper';
 import { useClickAway } from 'react-use';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { FormattedDate, FormattedMessage } from 'react-intl';
 
 import {
@@ -8,8 +7,8 @@ import {
 } from '@/components/Formatted';
 import TabBar from '@/components/navigation/TabBar';
 import { graphql, readFragment, type FragmentOf } from '@/graphql/tada';
+import { paths } from '@/pages/Anime/paths';
 import MediaBanner, { MediaBannerFragment } from '@/pages/Media/Banner';
-import { paths } from '@/pages/routes';
 
 export const AnimeBannerFragment = graphql(
   `
@@ -56,7 +55,7 @@ function AnimeFactoids(props: AnimeBannerProps) {
 
 export function AnimeBanner(props: AnimeBannerProps) {
   const anime = readFragment(AnimeBannerFragment, props.anime);
-  const route = paths.anime(anime.slug);
+  const route = paths(anime.slug);
 
   return (
     <MediaBanner media={anime}>

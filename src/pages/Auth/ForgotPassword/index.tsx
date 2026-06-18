@@ -1,10 +1,7 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
-import AuthModalHeader from 'app/components/AuthModalHeader';
-import Button, { ButtonPreset } from 'app/components/controls/Button';
+import Button from 'app/components/controls/Button';
 import TextInput from 'app/components/controls/TextInput';
-import Modal from 'app/components/Modal';
 
 import { useAuthModalContext } from '../Layout';
 import styles from './styles.module.css';
@@ -21,8 +18,8 @@ export default function ForgotPasswordModal() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <Button type="submit" {...ButtonPreset.PRIMARY}>
-        Send password reset
+      <Button type="submit" kind="solid" color="green">
+        <FormattedMessage defaultMessage="Send password reset" />
       </Button>
     </form>
   );

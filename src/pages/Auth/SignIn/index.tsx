@@ -1,5 +1,5 @@
 import getAuthorization from '@nanoauth/myanimelist';
-import React, { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import {
   FaApple as AppleLogo,
@@ -11,14 +11,13 @@ import { FormattedMessage, useIntl, type IntlShape } from 'react-intl';
 import Button, {
   ButtonColor,
   ButtonKind,
-  ButtonPreset,
 } from '@/components/controls/Button';
 import TextInput from '@/components/controls/TextInput';
 import Alert from '@/components/feedback/Alert';
 import ModalLink from '@/components/ModalLink';
 import Rule from '@/components/Rule';
 import { nanoauthCredentials } from '@/constants/config';
-import { SessionContext } from '@/contexts/SessionContext';
+import { useRawSession } from '@/contexts/SessionContext';
 import { LoginFailed } from '@/errors';
 import useReturnToFn from '@/hooks/useReturnToFn';
 import loginWithPassword from '@/utils/login/withPassword';
@@ -42,10 +41,10 @@ function useFormatErrorMessage(formatMessage: IntlShape['formatMessage']) {
   };
 }
 
-const SignInModal: React.FC = function () {
+export default function SignInModal() {
   const { email: defaultEmail, setEmail } = useAuthModalContext();
   const { formatMessage } = useIntl();
-  const { setSession } = useContext(SessionContext);
+  const { setSession } = useRawSession();
   const returnTo = useReturnToFn();
   const formatErrorMessage = useFormatErrorMessage(formatMessage);
   const {
@@ -105,7 +104,7 @@ const SignInModal: React.FC = function () {
         })}
         {...register('password')}
       />
-      <Button type="submit" {...ButtonPreset.PRIMARY} loading={isSubmitting}>
+      <Button type="submit" kind="solid" color="green" loading={isSubmitting}>
         <FormattedMessage
           defaultMessage="Log in"
           description="Submit button for Sign In"
@@ -172,6 +171,4 @@ const SignInModal: React.FC = function () {
       </div>
     </form>
   );
-};
-
-export default SignInModal;
+}

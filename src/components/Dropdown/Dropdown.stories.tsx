@@ -1,5 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { type Meta, type StoryObj } from '@storybook/react';
 import { FaEllipsisH } from 'react-icons/fa';
 
 import {
@@ -10,7 +9,7 @@ import {
   Wrapper as DropdownWrapper,
 } from './index';
 
-export default {
+const meta = {
   title: 'Components/Dropdown',
   component: DropdownWrapper,
   parameters: {
@@ -22,33 +21,37 @@ export default {
     DropdownItem,
     DropdownItemLink,
   },
-} as ComponentMeta<typeof DropdownWrapper>;
+} satisfies Meta<typeof DropdownWrapper>;
 
-export const Basic: ComponentStory<typeof DropdownWrapper> = (args) => (
-  <DropdownWrapper {...args} popperOptions={{ placement: 'bottom' }}>
-    <DropdownToggle>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          border: '1px solid var(--purple)',
-          color: 'var(--purple)',
-          borderRadius: 50,
-          height: 50,
-          width: 50,
-        }}
-      >
-        <FaEllipsisH />
-      </div>
-    </DropdownToggle>
-    <DropdownMenu>
-      <DropdownItem>Item 1</DropdownItem>
-      <DropdownItem>Item 2</DropdownItem>
-    </DropdownMenu>
-  </DropdownWrapper>
-);
+export default meta;
 
-Basic.args = {
-  arrow: true,
-};
+type Story = StoryObj<typeof DropdownWrapper>;
+
+export const Basic = {
+  args: {
+    arrow: true,
+  },
+  render: (args) => (
+    <DropdownWrapper {...args} popperOptions={{ placement: 'bottom' }}>
+      <DropdownToggle>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '1px solid var(--purple)',
+            color: 'var(--purple)',
+            borderRadius: 50,
+            height: 50,
+            width: 50,
+          }}>
+          <FaEllipsisH />
+        </div>
+      </DropdownToggle>
+      <DropdownMenu>
+        <DropdownItem>Item 1</DropdownItem>
+        <DropdownItem>Item 2</DropdownItem>
+      </DropdownMenu>
+    </DropdownWrapper>
+  ),
+} satisfies Story;

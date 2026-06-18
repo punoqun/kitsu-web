@@ -1,5 +1,4 @@
-import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router';
 
 import { useQuery } from '@/graphql';
 import { graphql } from '@/graphql/tada';

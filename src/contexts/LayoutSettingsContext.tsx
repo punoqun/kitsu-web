@@ -1,5 +1,12 @@
 import { isEqual, merge } from 'lodash-es';
-import React, { useContext, useEffect, useState } from 'react';
+import type React from 'react';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import { type PartialDeep } from 'type-fest';
 
 import { type HeaderProps } from '@/components/Header/Header';
@@ -18,13 +25,15 @@ type LayoutSettingsContextType = {
 };
 
 export const LayoutSettingsContext =
-  React.createContext<LayoutSettingsContextType>({
+  createContext<LayoutSettingsContextType>({
     layoutSettings: DEFAULT_LAYOUT_SETTINGS,
 
     setLayoutSettings: () => {},
   });
 
-export const LayoutSettingsContextProvider: React.FC = function ({ children }) {
+export const LayoutSettingsContextProvider = function ({
+  children,
+}: React.PropsWithChildren) {
   const [layoutSettings, setLayoutSettings] = useState(DEFAULT_LAYOUT_SETTINGS);
 
   return (
@@ -38,7 +47,7 @@ export const LayoutSettingsContextProvider: React.FC = function ({ children }) {
   );
 };
 
-export const setLayoutSettings = function (
+export const useLayoutSettings = function (
   settings: PartialDeep<LayoutSettings>,
 ): void {
   const { layoutSettings, setLayoutSettings } = useContext(
@@ -46,24 +55,28 @@ export const setLayoutSettings = function (
   );
 
   // Ensure the settings are actually being changed before updating
-  const mergedLayoutSettings = merge(
-    {},
-    DEFAULT_LAYOUT_SETTINGS,
-    layoutSettings,
-    settings,
+  const mergedLayoutSettings = useMemo(
+    () => merge({}, DEFAULT_LAYOUT_SETTINGS, layoutSettings, settings),
+    [layoutSettings, settings],
   );
-  if (!isEqual(layoutSettings, mergedLayoutSettings)) {
-    useEffect(() => {
+
+  useEffect(() => {
+    if (!isEqual(layoutSettings, mergedLayoutSettings)) {
       return setLayoutSettings(mergedLayoutSettings);
-    }, [mergedLayoutSettings]);
-  }
+    }
+  }, [layoutSettings, mergedLayoutSettings, setLayoutSettings]);
 };
 
-export const HeaderSettings: React.FC<HeaderProps> = function ({
+export const HeaderSettings = function ({
   background,
   scrollBackground,
-}) {
-  setLayoutSettings({ header: { background, scrollBackground } });
+}: HeaderProps) {
+  useLayoutSettings(
+    useMemo(
+      () => ({ header: { background, scrollBackground } }),
+      [background, scrollBackground],
+    ),
+  );
 
   return <></>;
 };

@@ -1,4 +1,3 @@
-import React from 'react';
 
 import utilStyles from 'app/styles/utils.module.css';
 

@@ -1,5 +1,6 @@
 import { uniqueId } from 'lodash-es';
-import React, { useContext } from 'react';
+import type React from 'react';
+import { createContext, useContext } from 'react';
 import { useList } from 'react-use';
 
 export type ToasterItemID = string;
@@ -18,9 +19,11 @@ type Toaster = {
   replace: (item: ToasterListItem) => ToasterItemID;
 };
 
-export const ToasterContext = React.createContext<Toaster | null>(null);
+export const ToasterContext = createContext<Toaster | null>(null);
 
-export const ToasterContextProvider: React.FC = function ({ children }) {
+export const ToasterContextProvider = function ({
+  children,
+}: React.PropsWithChildren) {
   const [list, actions] = useList<ToasterListItem>([]);
 
   const toaster: Toaster = {

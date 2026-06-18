@@ -1,9 +1,10 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import invariant from 'tiny-invariant';
 import { useQuery } from 'urql';
 
-import CategoryList from '@/components/content/CategoryList';
+import CategoryList, {
+  CategoryListFragment,
+} from '@/components/content/CategoryList';
 import { Description } from '@/components/content/Description';
 import Reaction, { ReactionCardFragment } from '@/components/content/Reaction';
 import Section from '@/components/Section';
@@ -19,6 +20,7 @@ export const AnimeSummaryPageQuery = graphql(
     query findAnimeBySlug($slug: String!) {
       findAnime: findAnimeBySlug(slug: $slug) {
         ...AnimeLayoutFragment
+        ...CategoryListFragment
         slug
         description
         categories(first: 50, sort: [{ on: ANCESTRY, direction: ASCENDING }]) {
@@ -51,7 +53,7 @@ export const AnimeSummaryPageQuery = graphql(
       }
     }
   `,
-  [ReactionCardFragment, AnimeLayoutFragment],
+  [ReactionCardFragment, AnimeLayoutFragment, CategoryListFragment],
 );
 
 export default function AnimeSummaryPage() {
@@ -67,13 +69,16 @@ export default function AnimeSummaryPage() {
   if (!results[0].data?.findAnime) return null;
 
   const media = results[0].data.findAnime;
+  const description = media.description['en'];
 
   return (
     <AnimeLayout media={media}>
       <div className={styles.content} style={{ minWidth: 0 }}>
         <Card className={styles.descriptionCard}>
-          <Description text={media.description['en']} />
-          <CategoryList categories={media.categories} />
+          <Description
+            text={typeof description === 'string' ? description : ''}
+          />
+          <CategoryList media={media} />
         </Card>
       </div>
       <div className={styles.communitySidebar}>

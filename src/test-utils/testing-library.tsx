@@ -6,7 +6,7 @@ import {
   type RenderOptions,
   type RenderResult,
 } from '@testing-library/react';
-import React from 'react';
+import type React from 'react';
 import { IntlProvider } from 'react-intl';
 import { beforeEach } from 'vitest';
 
@@ -43,8 +43,9 @@ function render(
 // Tell Vitest to clean up after each test
 beforeEach(cleanup);
 
-// re-export everything
+// Re-export everything (screen, waitFor, fireEvent, within, etc.) and override
+// `render` with our IntlProvider-wrapped version. The duplicate `render` export
+// is intentional, so the import-x/export rule is disabled for these lines.
+/* eslint-disable import-x/export */
 export * from '@testing-library/react';
-
-// override render method
 export { render };

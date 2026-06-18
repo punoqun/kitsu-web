@@ -1,4 +1,5 @@
-import React, { type ButtonHTMLAttributes } from 'react';
+import type React from 'react';
+import { type ButtonHTMLAttributes } from 'react';
 
 import Spinner from 'app/components/feedback/Spinner';
 

@@ -1,18 +1,17 @@
-import React from 'react';
 import {
   Link as _Link,
   NavLink as _NavLink,
   type LinkProps as _LinkProps,
   type NavLinkProps as _NavLinkProps,
   type To as _To,
-} from 'react-router-dom';
+} from 'react-router';
 
 import { Path, PATH_TREE_BASE, type PathTree } from 'app/utils/routes';
 
 export type To = _To | Path | PathTree;
 
 /**
- * Converts our own "To" type into the react-router-dom "To" type. Has a funny name.
+ * Converts our own "To" type into the react-router "To" type. Has a funny name.
  *
  * @param path The path to convert.
  * @returns The converted path.

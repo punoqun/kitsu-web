@@ -2,7 +2,7 @@ import { addSeconds } from 'date-fns';
 
 import { apiHost, clientId } from 'app/constants/config';
 import { LoginFailed, NetworkError } from 'app/errors';
-import { Session } from 'app/types/session';
+import { type Session } from 'app/types/session';
 
 export default async function login({
   params = {},

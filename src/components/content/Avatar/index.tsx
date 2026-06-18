@@ -1,4 +1,3 @@
-import React from 'react';
 
 import { source as defaultAvatar } from '@/assets/default_avatar.svg?imageSource';
 import Image, {

@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import { Link, type To as LinkTo } from 'app/components/content/Link';
 

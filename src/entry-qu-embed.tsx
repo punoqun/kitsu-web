@@ -1,12 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { MemoryRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+import { MemoryRouter } from 'react-router';
 
 import App from 'app/App';
 
-ReactDOM.render(
+// If we don't have the app element, something has gone EXTREMELY wrong.
+ 
+const root = createRoot(document.getElementById('app')!);
+
+root.render(
   <MemoryRouter>
     <App />
-  </MemoryRouter>,
-  document.getElementById('app')
+  </MemoryRouter>
 );

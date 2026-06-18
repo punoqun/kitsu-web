@@ -1,5 +1,4 @@
 import { type Meta, type StoryObj } from '@storybook/react';
-import React from 'react';
 
 import illustrationSrc from 'app/assets/illustrations/not-found.svg';
 
