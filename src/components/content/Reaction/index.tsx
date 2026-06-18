@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaCaretUp } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
 import { useQuery } from 'urql';

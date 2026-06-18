@@ -1,4 +1,3 @@
-import React from 'react';
 
 import { graphql, readFragment, type FragmentOf } from '@/graphql';
 import Tag, { type TagColor } from 'app/components/content/Tag';

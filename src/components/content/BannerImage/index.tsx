@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import { source as defaultBanner } from '@/assets/default_banner.jpg?imageSource';
 import Image, {

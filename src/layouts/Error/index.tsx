@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import { HeaderSettings } from 'app/contexts/LayoutSettingsContext';
 import Page from 'app/layouts/Page';

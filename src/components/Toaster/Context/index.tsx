@@ -1,5 +1,6 @@
 import { uniqueId } from 'lodash-es';
-import React, { createContext, useContext } from 'react';
+import type React from 'react';
+import { createContext, useContext } from 'react';
 import { useList } from 'react-use';
 
 export type ToasterItemID = string;

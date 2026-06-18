@@ -1,6 +1,6 @@
-import React from 'react';
+import type React from 'react';
 import { createRoot, type Root } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router';
 
 import App from 'app/App';
 

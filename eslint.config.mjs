@@ -24,6 +24,7 @@ export default config(
   importFlatConfigs.recommended,
   importFlatConfigs.typescript,
   reactPlugin.configs.flat.recommended,
+  reactPlugin.configs.flat['jsx-runtime'],
   i18next.configs['flat/recommended'],
   prettierConfig,
 

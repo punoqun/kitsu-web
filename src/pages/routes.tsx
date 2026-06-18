@@ -1,4 +1,3 @@
-import React from 'react';
 
 import { Path, type PathBuilder } from 'app/utils/routes';
 

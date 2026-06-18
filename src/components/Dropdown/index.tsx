@@ -1,12 +1,13 @@
 import { type Options } from '@popperjs/core';
-import React, {
+import type React from 'react';
+import {
   type ComponentProps,
   createContext,
   type HTMLProps,
   type PropsWithChildren,
   useContext,
 } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 import useDropdown from 'app/hooks/useDropdown';
 

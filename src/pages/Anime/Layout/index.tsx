@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 import { ImageFragment } from '@/components/content/Image';
 import { graphql, readFragment, type FragmentOf } from '@/graphql/tada';

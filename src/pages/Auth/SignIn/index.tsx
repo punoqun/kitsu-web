@@ -1,5 +1,5 @@
 import getAuthorization from '@nanoauth/myanimelist';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import {
   FaApple as AppleLogo,

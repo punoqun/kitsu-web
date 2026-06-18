@@ -1,4 +1,3 @@
-import React from 'react';
 
 import { source as defaultPoster } from '@/assets/default_poster.jpg?imageSource';
 

@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useState } from 'react';
-import { useLocation, useOutlet } from 'react-router-dom';
+import type React from 'react';
+import { createContext, useContext, useState } from 'react';
+import { useLocation, useOutlet } from 'react-router';
 
 import AuthModalHeader from 'app/components/AuthModalHeader';
 import Modal from 'app/components/Modal';

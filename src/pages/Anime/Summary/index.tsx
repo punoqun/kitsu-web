@@ -1,5 +1,4 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import invariant from 'tiny-invariant';
 import { useQuery } from 'urql';
 

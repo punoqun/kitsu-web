@@ -1,6 +1,7 @@
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 import * as Dialog from '@radix-ui/react-dialog';
-import React, { type DialogHTMLAttributes } from 'react';
+import type React from 'react';
+import { type DialogHTMLAttributes } from 'react';
 import { BsX } from 'react-icons/bs';
 import { useIntl } from 'react-intl';
 

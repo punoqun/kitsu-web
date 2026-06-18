@@ -1,4 +1,5 @@
-import React, { type HTMLProps } from 'react';
+import type React from 'react';
+import { type HTMLProps } from 'react';
 
 import { NavLink, type NavLinkProps } from 'app/components/content/Link';
 import { Path } from 'app/utils/routes';

@@ -1,5 +1,4 @@
 import { ErrorBoundary } from '@sentry/react';
-import React from 'react';
 import { FaExclamationTriangle } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
 import invariant from 'tiny-invariant';

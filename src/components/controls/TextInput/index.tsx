@@ -1,4 +1,4 @@
-import React, { forwardRef, type InputHTMLAttributes } from 'react';
+import { forwardRef, type InputHTMLAttributes } from 'react';
 
 import FormField, {
   type FormFieldValidationProps,

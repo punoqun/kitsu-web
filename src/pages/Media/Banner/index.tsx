@@ -1,4 +1,5 @@
-import React, { type ComponentProps } from 'react';
+import type React from 'react';
+import { type ComponentProps } from 'react';
 
 import BannerImage from '@/components/content/BannerImage';
 import { ImageFragment } from '@/components/content/Image';

@@ -1,5 +1,6 @@
 import isEqual from 'lodash-es/isEqual';
-import React, { memo, useId } from 'react';
+import type React from 'react';
+import { memo, useId } from 'react';
 
 import styles from './styles.module.css';
 

@@ -1,5 +1,4 @@
 import { type Meta, type StoryFn } from '@storybook/react';
-import React from 'react';
 
 import Card from './index';
 

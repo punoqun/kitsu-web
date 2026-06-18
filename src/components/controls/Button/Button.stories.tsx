@@ -1,5 +1,4 @@
 import { type Meta, type StoryObj } from '@storybook/react';
-import React from 'react';
 import { FaTrash } from 'react-icons/fa';
 
 import Button, { ButtonColor, ButtonKind, ButtonPreset } from './index';

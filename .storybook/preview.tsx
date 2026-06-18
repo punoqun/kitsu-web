@@ -1,6 +1,6 @@
 import * as Docs from '@storybook/addon-docs/blocks';
 import React from 'react';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router';
 
 import { SessionContextProvider } from '@/contexts/SessionContext';
 import { ToasterContextProvider } from 'app/components/Toaster/Context';

@@ -1,4 +1,5 @@
-import React, { type HTMLProps } from 'react';
+import type React from 'react';
+import { type HTMLProps } from 'react';
 
 import SpinnerImage from 'app/assets/spinner.svg?react';
 

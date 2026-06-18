@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import type React from 'react';
+import { useContext } from 'react';
 
 import Header from 'app/components/Header';
 import Toaster from 'app/components/Toaster/Toaster';

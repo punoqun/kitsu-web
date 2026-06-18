@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BsEyeFill, BsTrashFill } from 'react-icons/bs';
 import { FormattedMessage, useIntl } from 'react-intl';
 

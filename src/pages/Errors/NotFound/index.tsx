@@ -1,4 +1,3 @@
-import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import illustration from 'app/assets/illustrations/not-found.svg?url';

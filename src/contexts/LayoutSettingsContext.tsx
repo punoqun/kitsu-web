@@ -1,5 +1,6 @@
 import { isEqual, merge } from 'lodash-es';
-import React, {
+import type React from 'react';
+import {
   createContext,
   useContext,
   useEffect,

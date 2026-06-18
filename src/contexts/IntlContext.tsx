@@ -1,6 +1,7 @@
 import { type Locale as DateFnsLocale } from 'date-fns';
 import { preferredLocale } from 'preferred-locale';
-import React, { createContext, useContext, useReducer } from 'react';
+import type React from 'react';
+import { createContext, useContext, useReducer } from 'react';
 import { IntlProvider, type IntlConfig } from 'react-intl';
 import { useAsync, useCookie, useEvent } from 'react-use';
 

@@ -1,5 +1,5 @@
 import { DropdownMenu } from 'radix-ui';
-import React from 'react';
+import type React from 'react';
 
 import styles from './styles.module.css';
 

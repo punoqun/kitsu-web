@@ -1,6 +1,6 @@
-import React from 'react';
+import type React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 
 import Logo from 'app/assets/logo.svg?react';
 import ModalLink from 'app/components/ModalLink';
