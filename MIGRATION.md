@@ -48,29 +48,35 @@ edge as each reaches feature parity. Two integration modes already exist in the 
   modal-over-background pattern in `src/Router.tsx`.
 - **Quality tooling:** Storybook 8, Vitest + RTL, Cypress, ESLint/Prettier/Stylelint, Sentry.
 
-### 2.2 Component library — started 🟡
+### 2.2 Component library — growing 🟡
 
 - **content:** `Avatar`, `BannerImage`, `Byline`, `CategoryList`, `CategoryTag`, `Description`,
-  `Image`, `PosterImage`, `Reaction`, `Tag`, `Link`
+  `Image`, `PosterImage`, `Reaction`, `Tag`, `Link`, `EpisodeCard`, `ChapterCard`,
+  `MediaPersonCard`, `MediaPosterCard`, `QuoteCard`
 - **controls:** `Button`, `Checkbox`, `Field`, `TextInput`
+- **feedback:** `Alert`, `Spinner`
 - **surfaces:** `Card` · **navigation:** `TabBar`
 - **shell / misc:** `Header`, `Layout`, `Modal`, `Dropdown`, `GroupBox`, `Section`, `Rule`,
-  `Toaster`, `Formatted`, `ModalLink`, `AuthModalHeader`
+  `Toaster`, `Formatted` (Subtype, EpisodeCount, ChapterCount, ReleaseStatus, RelativeTime),
+  `ModalLink`, `AuthModalHeader`
 - **Notable gaps:** richer form controls (select, radio, textarea, file/image upload), media
   cards & grids, pagination / infinite scroll, comment & post composer, rating widget, menus,
   tooltips, skeleton loaders, empty/error states, data tables.
 
-### 2.3 Pages — early 🔴 (only 3 surfaces migrated)
+### 2.3 Pages — Anime & Manga verticals complete 🟢 / rest pending 🔴
 
 | Status | Route | Notes |
 | --- | --- | --- |
-| ✅ | `/anime/:slug` | Summary tab only |
+| ✅ | `/anime/:slug` | Summary + all tabs (see below) |
+| ✅ | `/anime/:slug/{episodes,episodes/:n,characters,staff,reactions,franchise,quotes,quotes/:id}` | **all built** — full Anime vertical |
+| ✅ | `/manga/:slug` | Summary + all tabs (Chapters/chapter detail instead of episodes) |
+| ✅ | `/manga/:slug/{chapters,chapters/:n,characters,staff,reactions,franchise,quotes,quotes/:id}` | **all built** — full Manga vertical, mirrors Anime |
 | ✅ | `/auth/sign-in`, `/auth/sign-up`, `/auth/forgot-password` | page + modal display modes |
 | ✅ | `/admin/held` | moderation: held content |
-| 🚧 | `/anime/:slug/{episodes,episodes/:n,characters,staff,reactions,franchise,quotes,quotes/:id}` | path builders exist, **pages not built** |
 | 🚧 | `/users/:slug/{reactions,reviews,followers,following,groups,library/:type}` | path builders exist, **pages not built** |
 | 🚧 | `/posts/:id`, `/comments/:id` | path builders exist, **pages not built** |
-| ❌ | Manga, Library dashboard, Browse/Explore, Search, Feed, Groups, Settings, Notifications, Messaging, Homepage, Onboarding | not started |
+| 🟡 | `LibraryBox` (Add/Edit library, status/progress/rating) | UI present on Anime/Manga sidebars but **mutations not wired** (display-only) |
+| ❌ | Library dashboard, Browse/Explore, Search, Feed, Groups, Settings, Notifications, Messaging, Homepage, Onboarding | not started |
 
 Root `/` and any unmatched path render `NotFound` by design (`*` route in `src/Router.tsx`).
 
@@ -111,15 +117,17 @@ run in parallel once the pattern is proven.
 - CI: unit coverage baseline + Cypress E2E smoke across the boundary.
 
 ### Phase 1 — Anime vertical (proves the pattern)
-- Build remaining Anime tabs: Episodes, Episode detail, Characters, Staff, Reactions, Franchise,
-  Quotes, Quote detail.
+- ✅ Built all remaining Anime tabs: Episodes, Episode detail, Characters, Staff, Reactions,
+  Franchise, Quotes, Quote detail.
 - Library actions on media (status / progress / rating) wired end-to-end via `LibraryBox` +
-  optimistic mutations; reaction composer + voting.
+  optimistic mutations; reaction composer + voting. **(LibraryBox UI exists; mutations still TODO.)**
 - Flip `/anime/*` to V4 at the edge; retire V3 anime routes.
 
 ### Phase 2 — Manga + Media generalization
-- Generalize the `Media` abstraction so Anime and Manga share `Layout` / `Banner` / `LibraryBox`.
-- Manga routes mirroring Anime (chapters/volumes instead of episodes).
+- ✅ Generalized the `Media` abstraction so Anime and Manga share `Layout` / `Banner` /
+  `LibraryBox` and all cast/reaction/quote/franchise components.
+- ✅ Manga routes mirroring Anime (chapters/volumes instead of episodes): Summary, Chapters,
+  Chapter detail, Characters, Staff, Reactions, Franchise, Quotes, Quote detail.
 
 ### Phase 3 — User / Profile vertical
 - Profile summary; **Library dashboard** (filter/sort/status columns, progress, bulk edit — core
