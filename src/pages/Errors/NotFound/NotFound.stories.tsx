@@ -1,16 +1,20 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { type Meta, type StoryObj } from '@storybook/react';
 import React from 'react';
 
 import NotFoundPage from './index';
 
-export default {
+const meta = {
   title: 'Pages/Errors/Not Found',
   component: NotFoundPage,
   parameters: {
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof NotFoundPage>;
+} satisfies Meta<typeof NotFoundPage>;
 
-export const NotFound: ComponentStory<typeof NotFoundPage> = () => (
-  <NotFoundPage />
-);
+export default meta;
+
+type Story = StoryObj<typeof NotFoundPage>;
+
+export const NotFound = {
+  render: () => <NotFoundPage />,
+} satisfies Story;

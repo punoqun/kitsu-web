@@ -4,24 +4,25 @@ import globals from 'globals';
 
 /* Plugins */
 import js from '@eslint/js';
-import ts from 'typescript-eslint';
+import { config, configs as tsConfigs } from 'typescript-eslint';
 import i18next from 'eslint-plugin-i18next';
 import prettierConfig from 'eslint-config-prettier';
-import importPlugin from 'eslint-plugin-import-x';
+import { flatConfigs as importFlatConfigs } from 'eslint-plugin-import-x';
 import reactPlugin from 'eslint-plugin-react';
 import hooksPlugin from 'eslint-plugin-react-hooks';
 import vitest from '@vitest/eslint-plugin';
 import testingLibrary from 'eslint-plugin-testing-library';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 
-export default ts.config(
+export default config(
   {
     ignores: ['dist/', 'coverage/'],
   },
 
   js.configs.recommended,
-  ...ts.configs.recommended,
-  importPlugin.flatConfigs.recommended,
-  importPlugin.flatConfigs.typescript,
+  ...tsConfigs.recommended,
+  importFlatConfigs.recommended,
+  importFlatConfigs.typescript,
   reactPlugin.configs.flat.recommended,
   i18next.configs['flat/recommended'],
   prettierConfig,
@@ -41,6 +42,12 @@ export default ts.config(
     },
     settings: {
       react: { version: 'detect' },
+      'import-x/resolver-next': [
+        createTypeScriptImportResolver({
+          alwaysTryTypes: true,
+          project: './tsconfig.eslint.json',
+        }),
+      ],
     },
     rules: {
       ...vitest.configs.recommended.rules,
@@ -97,7 +104,7 @@ export default ts.config(
 
   // Storybook and test files
   {
-    files: ['*.{stories,test}.{js,jsx,ts,tsx}'],
+    files: ['**/*.{stories,test}.{js,jsx,ts,tsx}'],
     rules: {
       'i18next/no-literal-string': 'off',
     },
@@ -105,17 +112,20 @@ export default ts.config(
 
   // Just test files
   {
-    files: ['*.test.{js,jsx,ts,tsx}'],
+    files: ['**/*.test.{js,jsx,ts,tsx}'],
     ...testingLibrary.configs['flat/react'],
   },
 
   // Node-based config files
   {
-    files: ['**/*.config.{js,ts}'],
+    files: ['**/*.config.{js,ts}', 'postcss/**/*.js'],
     languageOptions: {
       globals: globals.node,
       ecmaVersion: 2015,
       sourceType: 'commonjs',
+    },
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
     },
   },
 );

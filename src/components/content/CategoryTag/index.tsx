@@ -33,7 +33,7 @@ export default function CategoryTag(props: CategoryTagProps) {
       key={category.slug}
       color={category.root ? TAG_COLORS[category.root.slug] : 'grey'}>
       {/* TODO(i18n): Use the correct locale, resolved on the server */}
-      {category.title['en']}
+      {String(category.title['en'] ?? '')}
     </Tag>
   );
 }

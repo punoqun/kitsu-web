@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BsEyeFill, BsTrashFill } from 'react-icons/bs';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 import Avatar from '@/components/content/Avatar';
 import Byline from '@/components/content/Byline';
@@ -76,6 +77,7 @@ type HeldMediaReactionProps = {
 export default function HeldMediaReaction(props: HeldMediaReactionProps) {
   const reaction = readFragment(HeldMediaReactionFragment, props.reaction);
   const [success, setSuccess] = useState(false);
+  const intl = useIntl();
 
   return (
     <Card
@@ -106,7 +108,9 @@ export default function HeldMediaReaction(props: HeldMediaReactionProps) {
               reaction.moderationScores as Record<string, number>
             }
           />
-          <Tag color="purple">Reaction</Tag>
+          <Tag color="purple">
+            {intl.formatMessage({ defaultMessage: 'Reaction' })}
+          </Tag>
         </Byline.Right>
       </Byline.Container>
       <div className={styles.Content}>{reaction.reaction}</div>
@@ -122,7 +126,7 @@ export default function HeldMediaReaction(props: HeldMediaReactionProps) {
         kind="solid"
         color="red"
         className={styles.DeleteButton}>
-        <BsTrashFill /> Delete
+        <BsTrashFill /> <FormattedMessage defaultMessage="Delete" />
       </MutationButton>
       {/*<Button
         size="medium"
@@ -145,7 +149,7 @@ export default function HeldMediaReaction(props: HeldMediaReactionProps) {
         kind="solid"
         color="green"
         className={styles.UnholdButton}>
-        <BsEyeFill /> Unhold
+        <BsEyeFill /> <FormattedMessage defaultMessage="Unhold" />
       </MutationButton>
     </Card>
   );

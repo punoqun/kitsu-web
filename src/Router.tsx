@@ -1,6 +1,6 @@
 import { ErrorBoundary } from '@sentry/react';
 import React from 'react';
-import { Location, Outlet, Route, Routes, useLocation } from 'react-router-dom';
+import { type Location, Outlet, Route, Routes, useLocation } from 'react-router-dom';
 
 import 'app/styles/index.css';
 

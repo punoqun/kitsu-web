@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 
 export type FormFieldValidationProps = {
   type?: 'valid' | 'invalid';
-  icon?: () => JSX.Element;
+  icon?: () => React.JSX.Element;
   message?: string;
 };
 
@@ -20,8 +20,8 @@ export type FormFieldProps = {
   className?: string;
   style?: React.CSSProperties;
   validation?: FormFieldValidationProps;
-  children: (props: FormFieldChildProps) => JSX.Element;
-  actionIcon?: () => JSX.Element;
+  children: (props: FormFieldChildProps) => React.JSX.Element;
+  actionIcon?: () => React.JSX.Element;
   onActionIconClicked?: () => void;
 };
 

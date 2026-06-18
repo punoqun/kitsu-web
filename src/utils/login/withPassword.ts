@@ -1,5 +1,5 @@
 import LoginFailed from 'app/errors/LoginFailed';
-import { Session } from 'app/types/session';
+import { type Session } from 'app/types/session';
 
 import login from './login';
 

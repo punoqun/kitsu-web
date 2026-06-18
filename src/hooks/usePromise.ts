@@ -1,9 +1,9 @@
-import { DependencyList, useEffect, useState } from 'react';
+import { type DependencyList, useEffect, useState } from 'react';
 
 export type PromiseState<T> = {
   state: 'pending' | 'rejected' | 'fulfilled';
   value?: T;
-  error?: any;
+  error?: unknown;
 };
 
 export default function usePromise<T>(

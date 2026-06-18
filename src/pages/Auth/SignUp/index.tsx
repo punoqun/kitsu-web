@@ -6,12 +6,12 @@ import {
   FaFacebook as FacebookLogo,
   FaTwitter as TwitterLogo,
 } from 'react-icons/fa';
+import { FormattedMessage } from 'react-intl';
 import * as yup from 'yup';
 
 import Button, {
   ButtonColor,
   ButtonKind,
-  ButtonPreset,
 } from 'app/components/controls/Button';
 import TextInput from 'app/components/controls/TextInput';
 import Rule from 'app/components/Rule';
@@ -55,8 +55,8 @@ export default function SignUpModal() {
   });
   const currentEmail = watch('email');
   useEffect(() => {
-    currentEmail && setEmail(currentEmail);
-  }, [currentEmail]);
+    if (currentEmail) setEmail(currentEmail);
+  }, [currentEmail, setEmail]);
 
   return (
     <form
@@ -116,8 +116,8 @@ export default function SignUpModal() {
         }
         {...register('confirmPassword')}
       />
-      <Button type="submit" {...ButtonPreset.PRIMARY}>
-        Create account
+      <Button type="submit" kind="solid" color="green">
+        <FormattedMessage defaultMessage="Create account" />
       </Button>
       <Rule label="Or sign up with" />
       <div className={styles.socialLoginContainer}>

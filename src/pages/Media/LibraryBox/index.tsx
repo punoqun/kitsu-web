@@ -87,8 +87,7 @@ function AddToLibraryBox(props: LibraryBoxParams) {
   );
 }
 
-function EditLibraryBox(props: LibraryBoxParams) {
-  const media = readFragment(LibraryBoxFragment, props.media);
+function EditLibraryBox() {
   const { formatMessage } = useIntl();
 
   return (
@@ -117,6 +116,6 @@ export default function LibraryBox(props: LibraryBoxParams) {
   if (!media.myLibraryEntry) {
     return <AddToLibraryBox {...props} />;
   } else {
-    return <EditLibraryBox {...props} />;
+    return <EditLibraryBox />;
   }
 }

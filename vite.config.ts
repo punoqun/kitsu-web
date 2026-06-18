@@ -39,18 +39,9 @@ switch (process.env.BUILD_TARGET) {
       },
     };
     break;
-  case 'server':
-    build = {
-      outDir: path.resolve(__dirname, 'dist/server'),
-      ssr: 'src/entry-server.tsx',
-      rollupOptions: {
-        input: 'src/entry-server.tsx',
-      },
-    };
-    break;
   default:
     throw new Error(
-      'Unknown build target. Please set BUILD_TARGET to one of: library, client, server',
+      'Unknown build target. Please set BUILD_TARGET to one of: library, client',
     );
 }
 

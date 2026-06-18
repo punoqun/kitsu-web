@@ -4,7 +4,7 @@ const VAR_REGEX = /var\((--[a-z0-9-]+)\)/;
  * Custom PostCSS plugin to resolve custom properties within the same scope, so that color-mod can
  * be preprocessed without issues.
  */
-module.exports = (opts = {}) => {
+module.exports = () => {
   return {
     postcssPlugin: 'resolveLocalCustomProperties',
 

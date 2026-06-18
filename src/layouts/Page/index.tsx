@@ -6,10 +6,10 @@ import styles from './styles.module.css';
 
 const LoadingPage = () => <SpinnerBlock className={styles.pageSpinner} />;
 
-const Page: React.FC<{ loading: boolean }> = function ({
+const Page = function ({
   loading = false,
   children,
-}) {
+}: React.PropsWithChildren<{ loading: boolean }>) {
   return (
     <Suspense fallback={<LoadingPage />}>
       {loading ? <LoadingPage /> : children}

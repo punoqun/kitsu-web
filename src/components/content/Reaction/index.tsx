@@ -10,7 +10,7 @@ import Button, { ButtonColor, ButtonKind } from '@/components/controls/Button';
 import { FormattedRelativeTime } from '@/components/Formatted';
 import Card from '@/components/surfaces/Card';
 import { graphql, readFragment, type FragmentOf } from '@/graphql/tada';
-import { paths } from '@/pages/routes';
+import { paths as profilePaths } from '@/pages/Profile/routes';
 
 import styles from './styles.module.css';
 
@@ -145,7 +145,7 @@ export default function ReactionCard(props: ReactionCardProps) {
             values={{
               author: (
                 <Link
-                  to={paths.profile(reaction.author)}
+                  to={profilePaths(reaction.author)}
                   className={styles.bylineLink}>
                   {reaction.author.name}
                 </Link>

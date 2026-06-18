@@ -1,4 +1,3 @@
-import { NavigationMenu } from 'radix-ui';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from 'react-router-dom';
@@ -50,8 +49,12 @@ export default function Header({
                 </Menu.Trigger>
                 <Menu.Content>
                   <ul>
-                    <li>Anime</li>
-                    <li>Manga</li>
+                    <li>
+                      <FormattedMessage defaultMessage="Anime" />
+                    </li>
+                    <li>
+                      <FormattedMessage defaultMessage="Manga" />
+                    </li>
                   </ul>
                 </Menu.Content>
               </Menu.Root>
@@ -69,8 +72,12 @@ export default function Header({
                 </Menu.Trigger>
                 <Menu.Content>
                   <ul>
-                    <li>Anime</li>
-                    <li>Manga</li>
+                    <li>
+                      <FormattedMessage defaultMessage="Anime" />
+                    </li>
+                    <li>
+                      <FormattedMessage defaultMessage="Manga" />
+                    </li>
                   </ul>
                 </Menu.Content>
               </Menu.Root>

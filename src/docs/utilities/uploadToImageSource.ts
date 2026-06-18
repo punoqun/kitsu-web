@@ -1,6 +1,6 @@
 import { encode } from 'blurhash';
 
-import { ImageSource } from 'app/components/content/Image';
+import { type ImageSource } from 'app/components/content/Image';
 
 export function imageSourceLoader<Key extends string>(field: Key) {
   return async ({ args }: { args: unknown }) =>

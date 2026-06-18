@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import Container from '@/components/utils/Container';
 import { graphql, useQuery } from '@/graphql';
@@ -17,6 +18,7 @@ const HeldContentQuery = graphql(
         edges {
           node {
             __typename
+            id
             ...HeldPostFragment
             ...HeldCommentFragment
             ...HeldMediaReactionFragment
@@ -54,23 +56,24 @@ export default function HeldContentPage() {
 
       {items?.edges && (
         <>
-          {items.edges.map(({ node }) =>
-            node.__typename === 'Post' ? (
-              <HeldPost post={node} key={node.id} />
+          {items.edges.map((edge) => {
+            const node = edge?.node;
+            if (!node) return null;
+
+            const key = String(node.id);
+
+            return node.__typename === 'Post' ? (
+              <HeldPost post={node} key={key} />
             ) : node.__typename === 'Comment' ? (
-              <HeldComment comment={node} key={node.id} />
+              <HeldComment comment={node} key={key} />
             ) : node.__typename === 'MediaReaction' ? (
-              <HeldMediaReaction reaction={node} key={node.id} />
-            ) : (
-              <div key={node.id}>
-                {node.__typename} {node.id}
-              </div>
-            ),
-          )}
+              <HeldMediaReaction reaction={node} key={key} />
+            ) : null;
+          })}
 
           {items.pageInfo.hasNextPage && (
-            <button onClick={() => setAfter(items.pageInfo.endCursor)}>
-              load more
+            <button onClick={() => setAfter(items.pageInfo.endCursor ?? '')}>
+              <FormattedMessage defaultMessage="load more" />
             </button>
           )}
         </>

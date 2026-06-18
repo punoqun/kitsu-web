@@ -4,7 +4,7 @@ import Header from 'app/components/Header';
 import Toaster from 'app/components/Toaster/Toaster';
 import { LayoutSettingsContext } from 'app/contexts/LayoutSettingsContext';
 
-const Layout: React.FC = function ({ children }) {
+const Layout = function ({ children }: React.PropsWithChildren) {
   const { layoutSettings } = useContext(LayoutSettingsContext);
 
   return (

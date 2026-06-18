@@ -1,5 +1,3 @@
-import { mapKeys, mapValues } from 'lodash-es';
-
 import { type Locale } from './utils/locale';
 
 const translationFiles = import.meta.glob('./bundles/*/header.ts', {

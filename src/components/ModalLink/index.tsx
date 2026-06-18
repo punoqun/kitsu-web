@@ -1,5 +1,5 @@
-import React, { ComponentProps, useContext } from 'react';
-import { Link, Location, useLocation } from 'react-router-dom';
+import React, { type ComponentProps, useContext } from 'react';
+import { Link, type Location, useLocation } from 'react-router-dom';
 
 import { IsModalContext } from 'app/contexts/ModalContext';
 import useQueryParams from 'app/hooks/useQueryParams';

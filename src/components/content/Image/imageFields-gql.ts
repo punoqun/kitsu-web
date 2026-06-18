@@ -1,6 +1,4 @@
-import { DocumentNode } from 'graphql';
-
-import * as Types from '../../../graphql/types';
+import { type DocumentNode } from 'graphql';
 
 export type ImageFieldsFragment = {
   blurhash?: string | null;

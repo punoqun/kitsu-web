@@ -70,12 +70,15 @@ export default function AnimeSummaryPage() {
   if (!results[0].data?.findAnime) return null;
 
   const media = results[0].data.findAnime;
+  const description = media.description['en'];
 
   return (
     <AnimeLayout media={media}>
       <div className={styles.content} style={{ minWidth: 0 }}>
         <Card className={styles.descriptionCard}>
-          <Description text={media.description['en']} />
+          <Description
+            text={typeof description === 'string' ? description : ''}
+          />
           <CategoryList media={media} />
         </Card>
       </div>

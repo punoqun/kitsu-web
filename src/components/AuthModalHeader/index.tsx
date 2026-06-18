@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { NavLink } from 'react-router-dom';
 
 import Logo from 'app/assets/logo.svg?react';
@@ -22,19 +23,21 @@ const AuthModalHeader: React.FC<{
           <li>
             <ModalLink
               component={NavLink}
-              to={{ pathname: '/auth/sign-up', state }}
+              to={{ pathname: '/auth/sign-up' }}
+              state={state}
               className={styles.navLink}
             >
-              Sign Up
+              <FormattedMessage defaultMessage="Sign Up" />
             </ModalLink>
           </li>
           <li>
             <ModalLink
               component={NavLink}
-              to={{ pathname: '/auth/sign-in', state }}
+              to={{ pathname: '/auth/sign-in' }}
+              state={state}
               className={styles.navLink}
             >
-              Sign In
+              <FormattedMessage defaultMessage="Sign In" />
             </ModalLink>
           </li>
         </ul>

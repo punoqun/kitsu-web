@@ -1,8 +1,7 @@
-import { type OnErrorFn } from '@formatjs/intl';
 import { type Locale as DateFnsLocale } from 'date-fns';
 import { preferredLocale } from 'preferred-locale';
-import React, { useReducer } from 'react';
-import { IntlProvider } from 'react-intl';
+import React, { createContext, useContext, useReducer } from 'react';
+import { IntlProvider, type IntlConfig } from 'react-intl';
 import { useAsync, useCookie, useEvent } from 'react-use';
 
 import translations from 'app/locales';
@@ -12,6 +11,7 @@ type LocaleState = {
   setLocale: (locale: string) => void;
   unsetLocale: () => void;
 };
+type OnErrorFn = NonNullable<IntlConfig['onError']>;
 
 function useLocaleState(locale?: string): LocaleState {
   const [cookie, setCookie, unsetCookie] = useCookie('chosenLocale');
@@ -33,14 +33,14 @@ function useLocaleState(locale?: string): LocaleState {
   } else {
     const availableLocales = Object.keys(translations);
     return {
-      locale: preferredLocale(availableLocales, 'en'),
+      locale: preferredLocale('en', availableLocales),
       setLocale: setCookie,
       unsetLocale: unsetCookie,
     };
   }
 }
 
-export const LocaleContext = React.createContext<{
+export const LocaleContext = createContext<{
   locale: string;
   setLocale: (locale: string) => void;
   unsetLocale: () => void;
@@ -51,19 +51,19 @@ export const LocaleContext = React.createContext<{
 });
 
 // @ts-ignore We guarantee that this is actually never null
-export const DateFnsLocaleContext = React.createContext<DateFnsLocale>(null);
+export const DateFnsLocaleContext = createContext<DateFnsLocale>(null);
 
-const IntlContext: React.FC<{ locale?: string }> = function ({
+const IntlContext = function ({
   children,
   locale,
-}) {
+}: React.PropsWithChildren<{ locale?: string }>) {
   const value = useLocaleState(locale);
   const { value: localeData } = useAsync(
     translations[value.locale].bundles.main,
   );
 
   const onError: OnErrorFn | undefined = import.meta.env.DEV
-    ? (err) => {
+    ? (err: Parameters<OnErrorFn>[0]) => {
         if (err.code === 'MISSING_TRANSLATION') return;
         throw err;
       }
@@ -90,9 +90,9 @@ const IntlContext: React.FC<{ locale?: string }> = function ({
 export default IntlContext;
 
 export function useLocale(): LocaleState {
-  return React.useContext(LocaleContext);
+  return useContext(LocaleContext);
 }
 
 export function useDateFnsLocale(): DateFnsLocale {
-  return React.useContext(DateFnsLocaleContext);
+  return useContext(DateFnsLocaleContext);
 }

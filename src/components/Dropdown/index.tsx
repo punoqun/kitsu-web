@@ -1,27 +1,33 @@
-import { Options } from '@popperjs/core';
-import React, { ComponentProps, HTMLProps, useContext } from 'react';
+import { type Options } from '@popperjs/core';
+import React, {
+  type ComponentProps,
+  createContext,
+  type HTMLProps,
+  type PropsWithChildren,
+  useContext,
+} from 'react';
 import { Link } from 'react-router-dom';
 
 import useDropdown from 'app/hooks/useDropdown';
 
 import styles from './styles.module.css';
 
-const DropdownContext = React.createContext<{
+const DropdownContext = createContext<{
   arrow: boolean;
   dropdown: ReturnType<typeof useDropdown>;
 } | null>(null);
 
-interface DropdownWrapperProps {
+type DropdownWrapperProps = PropsWithChildren<{
   /** Whether to display an arrow */
   arrow: boolean;
   /** The options to pass to Popper.js */
   popperOptions?: Partial<Options>;
-}
-const DropdownWrapper: React.FC<DropdownWrapperProps> = function ({
+}>;
+const DropdownWrapper = function ({
   children,
   arrow,
   popperOptions = {},
-}) {
+}: DropdownWrapperProps) {
   const dropdown = useDropdown({
     modifiers: [
       { name: 'offset', options: { offset: [0, 14] } },
@@ -37,14 +43,14 @@ const DropdownWrapper: React.FC<DropdownWrapperProps> = function ({
   );
 };
 
-const DropdownToggle: React.FC = function ({ children }) {
+const DropdownToggle = function ({ children }: PropsWithChildren) {
   const ctx = useContext(DropdownContext);
   if (!ctx) return null;
 
   return <div {...ctx.dropdown.toggleProps}>{children}</div>;
 };
 
-const DropdownMenu: React.FC = function ({ children }) {
+const DropdownMenu = function ({ children }: PropsWithChildren) {
   const ctx = useContext(DropdownContext);
   if (!ctx) return null;
 

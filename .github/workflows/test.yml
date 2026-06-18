@@ -28,6 +28,18 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: Type Check
+        run: pnpm typecheck
+
+      - name: Lint
+        run: pnpm eslint .
+
+      - name: Build Client
+        run: pnpm build:client
+
+      - name: Build Library
+        run: pnpm build:library
+
       - name: Test App
         run: COVERAGE=true pnpm run test:unit
 

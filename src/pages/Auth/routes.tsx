@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import { Path, PathBuilder } from 'app/utils/routes';
+import { Path, type PathBuilder } from 'app/utils/routes';
 
 import ForgotPasswordModal from './ForgotPassword';
 import AuthLayout from './Layout';

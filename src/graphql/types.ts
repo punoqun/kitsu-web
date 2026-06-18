@@ -30,7 +30,7 @@ export type Scalars = {
   ISO8601DateTime: { input: Date; output: Date };
   JSON: { input: unknown; output: unknown };
   Map: { input: Record<string, string>; output: Record<string, string> };
-  Upload: { input: any; output: any };
+  Upload: { input: unknown; output: unknown };
 };
 
 /** A user account on Kitsu */
