@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "ignoreDeprecations": "6.0",
     "jsx": "react",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "target": "ESNext",

@@ -1,6 +1,6 @@
 import { type OnErrorFn } from '@formatjs/intl';
 import { type Locale as DateFnsLocale } from 'date-fns';
-import preferredLocale from 'preferred-locale';
+import { preferredLocale } from 'preferred-locale';
 import React, { useReducer } from 'react';
 import { IntlProvider } from 'react-intl';
 import { useAsync, useCookie, useEvent } from 'react-use';

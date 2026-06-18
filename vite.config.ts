@@ -91,7 +91,7 @@ export default defineConfig(({ mode }) => ({
       ...(mode !== 'development'
         ? {
             '@formatjs/icu-messageformat-parser':
-              '@formatjs/icu-messageformat-parser/no-parser',
+              '@formatjs/icu-messageformat-parser/no-parser.js',
           }
         : {}),
       app: path.resolve(__dirname, './src'),

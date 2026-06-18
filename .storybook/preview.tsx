@@ -1,4 +1,4 @@
-import * as Docs from '@storybook/blocks';
+import * as Docs from '@storybook/addon-docs/blocks';
 import React from 'react';
 import { HashRouter } from 'react-router-dom';
 

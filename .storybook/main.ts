@@ -1,16 +1,11 @@
-import type { StorybookConfig } from '@storybook/types';
+import type { StorybookConfig } from '@storybook/react-vite';
 
 export default {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.tsx'],
 
   addons: [
     '@storybook/addon-links',
-    {
-      name: '@storybook/addon-essentials',
-      options: {
-        backgrounds: false,
-      },
-    },
+    '@storybook/addon-docs',
     '@storybook/addon-designs',
     '@storybook/addon-a11y',
     '@etchteam/storybook-addon-status',

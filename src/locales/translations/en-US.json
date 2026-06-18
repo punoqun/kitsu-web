@@ -4441,6 +4441,9 @@
     "description": "settings -> privacy -> update",
     "message": "Update Profile"
   },
+  "t20QRC": {
+    "message": "by <b>{author}</b>"
+  },
   "thx7Wo": {
     "message": "TV"
   },
