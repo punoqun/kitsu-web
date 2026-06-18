@@ -1,6 +1,10 @@
 name: Kitsu Test Suite
 on: [push, pull_request]
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   test:
     name: Node ${{ matrix.node_version}}
@@ -45,9 +49,9 @@ jobs:
 
       - name: Report Test Coverage
         if: github.event_name == 'push' && github.ref == 'refs/heads/react'
-        uses: paambaati/codeclimate-action@v2.7.4
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        uses: qltysh/qlty-action/coverage@v2
         with:
-          coverageLocations: |
-            ${{ github.workspace }}/coverage/lcov.info:lcov
+          oidc: true
+          files: coverage/lcov.info
+          format: lcov
+          skip-errors: false
