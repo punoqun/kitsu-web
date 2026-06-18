@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import invariant from 'tiny-invariant';
 import { useQuery } from 'urql';
 
-import CategoryList from '@/components/content/CategoryList';
+import CategoryList, {
+  CategoryListFragment,
+} from '@/components/content/CategoryList';
 import { Description } from '@/components/content/Description';
 import Reaction, { ReactionCardFragment } from '@/components/content/Reaction';
 import Section from '@/components/Section';
@@ -19,6 +21,7 @@ export const AnimeSummaryPageQuery = graphql(
     query findAnimeBySlug($slug: String!) {
       findAnime: findAnimeBySlug(slug: $slug) {
         ...AnimeLayoutFragment
+        ...CategoryListFragment
         slug
         description
         categories(first: 50, sort: [{ on: ANCESTRY, direction: ASCENDING }]) {
@@ -51,7 +54,7 @@ export const AnimeSummaryPageQuery = graphql(
       }
     }
   `,
-  [ReactionCardFragment, AnimeLayoutFragment],
+  [ReactionCardFragment, AnimeLayoutFragment, CategoryListFragment],
 );
 
 export default function AnimeSummaryPage() {
@@ -73,7 +76,7 @@ export default function AnimeSummaryPage() {
       <div className={styles.content} style={{ minWidth: 0 }}>
         <Card className={styles.descriptionCard}>
           <Description text={media.description['en']} />
-          <CategoryList categories={media.categories} />
+          <CategoryList media={media} />
         </Card>
       </div>
       <div className={styles.communitySidebar}>
