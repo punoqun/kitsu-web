@@ -1,0 +1,44 @@
+.shelf {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  color: var(--section-header-text-color);
+  font-size: var(--font-xl);
+}
+
+.scroller {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  padding-block-end: 8px;
+  overflow-x: auto;
+  list-style: none;
+  scroll-padding-inline: 2px;
+  scroll-snap-type: x proximity;
+}
+
+.scroller:focus-visible {
+  border-radius: var(--radius-small);
+  outline: var(--focus-outline);
+  outline-offset: 4px;
+}
+
+.item {
+  flex: 0 0 120px;
+  scroll-snap-align: start;
+}
+
+.empty {
+  margin: 0;
+  border: var(--card-border);
+  border-radius: var(--radius-medium);
+  background: var(--card-background);
+  padding-block: 24px;
+  padding-inline: 16px;
+  color: var(--reaction-byline-color);
+}

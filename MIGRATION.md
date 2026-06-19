@@ -78,7 +78,10 @@ edge as each reaches feature parity. Two integration modes already exist in the 
 | 🟡 | `/posts/:id` | **built** — post + comments list via `findPostById` |
 | 🚧 | `/comments/:id` | placeholder page — schema exposes no `findCommentById` query root yet |
 | ✅ | `LibraryBox` (Add/Edit library, status/progress/rating) | **mutations wired** (create / update status·progress·rating / delete) with optimistic updates + Graphcache `Media.myLibraryEntry` linkage |
-| ❌ | Library dashboard, Browse/Explore, Search, Feed, Groups, Settings, Notifications, Messaging, Homepage, Onboarding | not started |
+| ✅ | `/` (Home) | Discovery homepage: trending anime/manga shelves (`globalTrending`) via `MediaShelf` |
+| ✅ | `/explore/:type` | Browse anime/manga: paginated poster grid + release-status filter tabs |
+| ✅ | `/search` | Search results (`?query=&type=`): media via `searchMediaByTitle`, users via `searchProfileByUsername`; Header SearchBox wired |
+| ❌ | Library dashboard, Feed, Groups, Settings, Notifications, Messaging, Onboarding | not started |
 
 Root `/` and any unmatched path render `NotFound` by design (`*` route in `src/Router.tsx`).
 
@@ -145,8 +148,13 @@ run in parallel once the pattern is proven.
 - Notifications.
 
 ### Phase 5 — Discovery
-- Homepage / dashboard, Browse / Explore, Search (typeahead + results), genre/category browse,
-  seasonal & trending.
+- ✅ Homepage (`/`) — trending anime/manga shelves via `globalTrending`, reusable `MediaShelf`.
+- ✅ Browse / Explore (`/explore/:type`) — paginated poster grid with release-status filter tabs
+  (`anime`/`manga` + `animeByStatus`/`mangaByStatus`).
+- ✅ Search (`/search?query=&type=`) — `searchMediaByTitle` + `searchProfileByUsername`; Header
+  `SearchBox` wired to navigate; result-type tabs (Anime/Manga/Users).
+- Shared helper `src/utils/media.ts` (`getMediaPath`/`getMediaTitle`) for `Media`-interface links.
+- Category/genre browse & seasonal still pending (category titles are localized `Map` fields).
 
 ### Phase 6 — Groups & Messaging
 - Groups: directory, group page, members, group feed, group moderation.

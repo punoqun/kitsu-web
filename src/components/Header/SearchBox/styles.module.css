@@ -1,29 +1,32 @@
-.Container {
+.container {
   display: flex;
   align-items: center;
   border-radius: 3px;
   border: none;
   background: var(--header-search-background);
   margin-block: 8px;
+  margin-inline: 0;
   align-self: stretch;
   color: var(--header-search-text-color);
 
   @media (--medium) {
-    & {
-      inline-size: 200px;
-    }
+    inline-size: 200px;
   }
 }
 
-.Icon {
-  height: 19px;
+.container label {
+  cursor: text;
+}
+
+.icon {
+  block-size: 19px;
   display: block;
 }
 
-.Input {
+.input {
   appearance: none;
-  height: 100%;
-  width: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   background: transparent;
   border: none;
   color: inherit;

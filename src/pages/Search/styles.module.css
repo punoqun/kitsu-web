@@ -1,0 +1,94 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  padding-block: 32px;
+  padding-inline: 10px;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  color: var(--section-header-text-color);
+  font-size: var(--font-xl);
+}
+
+.tabs {
+  border-radius: var(--radius-medium);
+  background: var(--card-background);
+  box-shadow: var(--card-shadow);
+}
+
+.tabLink {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  block-size: 100%;
+  padding-block: 0.5rem;
+  padding-inline: 1.2rem;
+  overflow-y: hidden;
+  color: var(--section-header-text-color);
+  font-size: var(--font-sm);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.tabLink::after {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 5px;
+  transform: translateY(100%);
+  border-radius: var(--radius-small) var(--radius-small) 0 0;
+  background: var(--tab-active-gradient);
+  content: ' ';
+  transition: transform 0.1s ease;
+}
+
+.tabLink:hover,
+.tabLinkActive {
+  opacity: 1;
+}
+
+.tabLinkActive::after {
+  transform: translateY(0);
+}
+
+.mediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  justify-items: center;
+  gap: 24px 16px;
+}
+
+.profileList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  gap: 8px;
+}
+
+.empty {
+  margin: 0;
+  border: var(--card-border);
+  border-radius: var(--radius-medium);
+  background: var(--card-background);
+  padding-block: 32px;
+  padding-inline: 16px;
+  color: var(--reaction-byline-color);
+  text-align: center;
+}
+
+.loadMore {
+  align-self: center;
+}

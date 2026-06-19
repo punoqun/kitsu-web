@@ -14,6 +14,10 @@
     "description": "Button label to load more profile reactions.",
     "message": "Load more"
   },
+  "/GvI7w": {
+    "description": "Explore status filter for all media.",
+    "message": "All"
+  },
   "/TTEe4": {
     "description": "Header for the profile reviews page with the total review count.",
     "message": "Reviews ({count})"
@@ -24,6 +28,10 @@
   },
   "/iHGFF": {
     "message": "We couldn’t find this page. It may have moved, or it may have disappeared into space."
+  },
+  "/lqDzH": {
+    "description": "Accessible label for the header search form",
+    "message": "Site search"
   },
   "/w5hD8": {
     "description": "Library status filter for completed entries.",
@@ -41,6 +49,10 @@
     "description": "Library status filter for on hold entries.",
     "message": "On Hold"
   },
+  "0mCxsS": {
+    "description": "Search page title when no search query has been entered.",
+    "message": "Search Kitsu"
+  },
   "13A1WF": {
     "description": "Button label linking users to browse anime",
     "message": "Browse anime"
@@ -55,6 +67,10 @@
   "4cEgTg": {
     "description": "Navigation tab label for a user's profile followers page.",
     "message": "Followers"
+  },
+  "4fOMaL": {
+    "description": "Search page title showing the user's search query.",
+    "message": "Results for “{query}”"
   },
   "53eNgd": {
     "message": "OVA"
@@ -96,6 +112,10 @@
   "7gMmSL": {
     "message": "Reaction"
   },
+  "87pjqv": {
+    "description": "Empty state shown when a user search has no results.",
+    "message": "No users found for this search."
+  },
   "8Kb0pq": {
     "description": "Empty state description explaining where library entries appear",
     "message": "Add anime or manga to your library and they will appear here."
@@ -103,11 +123,19 @@
   "8XlI+o": {
     "message": "by <b>{name}</b>"
   },
+  "8qSoHp": {
+    "description": "Heading for trending manga media in a shelf.",
+    "message": "Trending Manga"
+  },
   "947e44": {
     "message": "One-shot"
   },
   "9HuwR0": {
     "message": "by <b>{name}</b> - {time}"
+  },
+  "A/NY5B": {
+    "description": "Heading for a shelf of globally trending manga.",
+    "message": "Trending Manga"
   },
   "A/e55o": {
     "description": "Current manga library status label",
@@ -116,6 +144,18 @@
   "Aa3Q/Y": {
     "description": "Explanation shown when the comment detail page has no GraphQL query root available.",
     "message": "Comment {id} cannot be loaded because the GraphQL schema does not expose a single-comment lookup yet."
+  },
+  "AbbFfC": {
+    "description": "Empty state for the trending manga shelf.",
+    "message": "No manga is trending right now."
+  },
+  "BG+/le": {
+    "description": "Accessible label for search field",
+    "message": "Search Kitsu"
+  },
+  "BKdIw0": {
+    "description": "Empty state for the trending anime shelf.",
+    "message": "No anime is trending right now."
   },
   "CHVTCY": {
     "description": "Button label to load more profile reviews.",
@@ -142,6 +182,10 @@
   },
   "Dm5O3W": {
     "message": "{time} ago"
+  },
+  "EQk6BS": {
+    "description": "Explore status filter for finished media.",
+    "message": "Finished"
   },
   "EQpfkS": {
     "message": "Finished"
@@ -174,6 +218,14 @@
   "GjSYUW": {
     "description": "Suffix for a review rating out of ten.",
     "message": "/10"
+  },
+  "Hk17OG": {
+    "description": "Homepage hero description for the discovery landing page.",
+    "message": "Explore what the Kitsu community is watching, reading, and talking about right now."
+  },
+  "HuniCG": {
+    "description": "Heading for a shelf of globally trending anime.",
+    "message": "Trending Anime"
   },
   "I5otxe": {
     "description": "Accessibility label for modal close button",
@@ -208,6 +260,10 @@
     "description": "Empty state shown when a profile is not following anyone.",
     "message": "Not following anyone yet"
   },
+  "LPE4if": {
+    "description": "Accessible label for the explore status filter tabs.",
+    "message": "Explore status filters"
+  },
   "LUi2/M": {
     "description": "Button label to load more followed profiles.",
     "message": "Load more"
@@ -236,6 +292,14 @@
     "description": "Library status filter for dropped entries.",
     "message": "Dropped"
   },
+  "OfXLMt": {
+    "description": "Explore status filter for currently airing anime or current manga.",
+    "message": "Current"
+  },
+  "OmtPsx": {
+    "description": "Search results tab label for anime.",
+    "message": "Anime"
+  },
   "PY58GN": {
     "description": "Navigation tab label for a user's profile reactions page.",
     "message": "Reactions"
@@ -243,6 +307,10 @@
   "PlajgF": {
     "description": "Warning shown before revealing a spoiler review.",
     "message": "This review contains spoilers."
+  },
+  "Q0H55M": {
+    "description": "Homepage hero heading inviting visitors to discover media.",
+    "message": "Discover anime and manga"
   },
   "QLNQdo": {
     "description": "Accessible label for the library status filter tabs.",
@@ -272,12 +340,28 @@
     "description": "Placeholder shown on a profile card when the profile has no biography.",
     "message": "No bio yet."
   },
+  "Rtnnk9": {
+    "description": "Explore status filter for upcoming media.",
+    "message": "Upcoming"
+  },
   "S8kcy7": {
     "description": "Header for the profile followers page with the total followers count.",
     "message": "Followers ({count})"
   },
+  "SdSL31": {
+    "description": "Loading state shown while search results are loading.",
+    "message": "Loading search results…"
+  },
+  "T5fa7V": {
+    "description": "Search results tab label for manga.",
+    "message": "Manga"
+  },
   "TV5gEL": {
     "message": "Unhold"
+  },
+  "Ts88xW": {
+    "description": "Storybook heading for a shelf of trending anime.",
+    "message": "Trending Anime"
   },
   "TusEky": {
     "description": "Empty state shown when a profile has not written any reviews.",
@@ -300,12 +384,20 @@
   "VuzjdC": {
     "message": "Ongoing"
   },
+  "WMfO7N": {
+    "description": "Heading for the manga explore page.",
+    "message": "Explore Manga"
+  },
   "WY/wme": {
     "description": "Empty state shown when a profile has no reactions.",
     "message": "No reactions yet"
   },
   "WkWZIb": {
     "message": "Manhua"
+  },
+  "XhJgDw": {
+    "description": "Heading for the anime explore page.",
+    "message": "Explore Anime"
   },
   "ZfAWFL": {
     "message": "TBA"
@@ -365,6 +457,10 @@
   "auth-modal.sign-up.submit": {
     "description": "auth-modal -> sign-up -> submit",
     "message": "{step, select, 0 {Let's get some basic info first} 1 {Very witty - email is next!} 2 {Looks legit, how about a password?} 3 {Cool- Let's create that account} other {}}"
+  },
+  "b+ytW5": {
+    "description": "Accessible label for search result type tabs.",
+    "message": "Search result types"
   },
   "b5S2nP": {
     "description": "Number of likes on a post or comment.",
@@ -3158,6 +3254,10 @@
     "description": "Planned manga library status label",
     "message": "Want to Read"
   },
+  "klVsiJ": {
+    "description": "Empty state for a shelf without trending manga.",
+    "message": "No manga is trending right now."
+  },
   "km0TsN": {
     "description": "Current anime library status label",
     "message": "Watching"
@@ -4513,6 +4613,10 @@
     "description": "password-reset -> send",
     "message": "Send Email"
   },
+  "psZkMo": {
+    "description": "Button label to load more search results.",
+    "message": "Load more"
+  },
   "q4Xths": {
     "description": "Library entry progress count.",
     "message": "Progress {progress}"
@@ -4560,6 +4664,10 @@
   "reaction-modal.skip": {
     "description": "reaction-modal -> skip",
     "message": "Skip"
+  },
+  "rmsApi": {
+    "description": "Search results tab label for users.",
+    "message": "Users"
   },
   "rsVC/h": {
     "message": "Unreleased"
@@ -5050,6 +5158,10 @@
   },
   "t20QRC": {
     "message": "by <b>{author}</b>"
+  },
+  "tNn95+": {
+    "description": "Empty state shown when the manga explore page has no results for a status.",
+    "message": "No manga found for this status."
   },
   "tZbnNB": {
     "description": "Label for the rating displayed on a review card.",
@@ -6189,12 +6301,28 @@
     "description": "Button label to reveal a spoiler review.",
     "message": "Show review"
   },
+  "vEf/RZ": {
+    "description": "Empty state shown when a manga search has no results.",
+    "message": "No manga found for this search."
+  },
+  "vXvZLA": {
+    "description": "Button label to load more explore results.",
+    "message": "Load more"
+  },
+  "wCEJoX": {
+    "description": "Empty state shown when the anime explore page has no results for a status.",
+    "message": "No anime found for this status."
+  },
   "wMVcyT": {
     "message": "Doujin"
   },
   "x9kpoz": {
     "description": "Label for the number of replies to a comment.",
     "message": "Replies"
+  },
+  "xdQ+PZ": {
+    "description": "Prompt shown on the search page before a query has been entered.",
+    "message": "Enter a search term to find anime, manga, and users."
   },
   "xvlEcu": {
     "message": "{score} Spam"
@@ -6206,6 +6334,14 @@
   "y2T3ju": {
     "description": "Hover text for Apple sign in button",
     "message": "Log in with Apple"
+  },
+  "z57OMq": {
+    "description": "Heading for trending anime media in a shelf.",
+    "message": "Trending Anime"
+  },
+  "ztkuF2": {
+    "description": "Empty state shown when an anime search has no results.",
+    "message": "No anime found for this search."
   },
   "zuNbD4": {
     "description": "Header for the profile reactions page with the total reaction count.",

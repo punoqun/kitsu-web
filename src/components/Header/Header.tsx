@@ -3,6 +3,8 @@ import { NavLink } from 'react-router';
 
 import LogoImage from '@/assets/logo.svg?react';
 import Container from '@/components/utils/Container';
+import { NavLink as ContentNavLink } from '@/components/content/Link';
+import { paths as explorePaths } from '@/pages/Explore/paths';
 
 import Background, { type HeaderBackground } from './Background';
 import Menu from './Menu';
@@ -72,10 +74,18 @@ export default function Header({
                 <Menu.Content>
                   <ul>
                     <li>
-                      <FormattedMessage defaultMessage="Anime" />
+                      <Menu.Link asChild>
+                        <ContentNavLink to={explorePaths('anime')}>
+                          <FormattedMessage defaultMessage="Anime" />
+                        </ContentNavLink>
+                      </Menu.Link>
                     </li>
                     <li>
-                      <FormattedMessage defaultMessage="Manga" />
+                      <Menu.Link asChild>
+                        <ContentNavLink to={explorePaths('manga')}>
+                          <FormattedMessage defaultMessage="Manga" />
+                        </ContentNavLink>
+                      </Menu.Link>
                     </li>
                   </ul>
                 </Menu.Content>
