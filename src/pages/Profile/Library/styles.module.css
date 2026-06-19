@@ -1,0 +1,89 @@
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-inline-size: 0;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  color: var(--section-header-text-color);
+  font-size: var(--font-xl);
+}
+
+.statusTabs {
+  border-radius: var(--radius-medium);
+  background: var(--card-background);
+  box-shadow: var(--card-shadow);
+}
+
+.statusLink {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  block-size: 100%;
+  padding-block: 0.5rem;
+  padding-inline: 1.2rem;
+  overflow-y: hidden;
+  color: var(--section-header-text-color);
+  font-size: var(--font-sm);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.statusLink::after {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 5px;
+  transform: translateY(100%);
+  border-radius: var(--radius-small) var(--radius-small) 0 0;
+  background: var(--tab-active-gradient);
+  content: ' ';
+  transition: transform 0.1s ease;
+}
+
+.statusLink:hover,
+.statusLinkActive {
+  opacity: 1;
+}
+
+.statusLinkActive::after {
+  transform: translateY(0);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  justify-items: center;
+  gap: 24px 16px;
+}
+
+.empty {
+  margin: 0;
+  border: var(--card-border);
+  border-radius: var(--radius-medium);
+  background: var(--card-background);
+  padding-block: 32px;
+  padding-inline: 16px;
+  color: var(--reaction-byline-color);
+  text-align: center;
+}
+
+.loadMore {
+  align-self: center;
+  margin-block-start: 4px;
+}

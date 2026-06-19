@@ -74,7 +74,7 @@ edge as each reaches feature parity. Two integration modes already exist in the 
 | ✅ | `/manga/:slug/{chapters,chapters/:n,characters,staff,reactions,franchise,quotes,quotes/:id}` | **all built** — full Manga vertical, mirrors Anime |
 | ✅ | `/auth/sign-in`, `/auth/sign-up`, `/auth/forgot-password` | page + modal display modes |
 | ✅ | `/admin/held` | moderation: held content |
-| 🟡 | `/users/:slug` | **Summary built** (`ProfileLayout` + bio/stats via `findProfileBySlug`); tabs (reactions, reviews, followers, following, groups, library/:type) still pending |
+| 🟡 | `/users/:slug` | **Summary, Library dashboard, Reactions, Reviews, Followers, Following all built**; profile `library/:type` supports status filters + media-type. Groups tab dropped (no `Group` type in schema); follow/unfollow deferred (no mutation in schema). |
 | 🟡 | `/posts/:id` | **built** — post + comments list via `findPostById` |
 | 🚧 | `/comments/:id` | placeholder page — schema exposes no `findCommentById` query root yet |
 | ✅ | `LibraryBox` (Add/Edit library, status/progress/rating) | **mutations wired** (create / update status·progress·rating / delete) with optimistic updates + Graphcache `Media.myLibraryEntry` linkage |
@@ -132,10 +132,13 @@ run in parallel once the pattern is proven.
   Chapter detail, Characters, Staff, Reactions, Franchise, Quotes, Quote detail.
 
 ### Phase 3 — User / Profile vertical
-- 🚧 Profile summary **started** (`/users/:slug` — `ProfileLayout` + bio/stats); **Library
-  dashboard** (filter/sort/status columns, progress, bulk edit — core retention surface);
-  Reactions; Reviews; Followers / Following; Groups tab.
-- Follow/unfollow, library import & management.
+- ✅ Profile vertical built: Summary, **Library dashboard** (`/users/:slug/library/:type` with
+  status filters + anime/manga), Reactions, Reviews, Followers, Following. New reusable
+  components: `LibraryEntryCard`, `ReviewCard`, `ProfileCard`.
+- ⚠️ **Groups tab dropped** — the GraphQL schema exposes no `Group` type. **Follow/unfollow
+  deferred** — `ProfileMutations` only exposes `update` (no follow mutation); follower/following
+  lists are display-only until the schema adds it.
+- Library import & management — pending.
 
 ### Phase 4 — Social / Feed vertical
 - Global + user feeds, Post detail, Comment threads + composer, likes/reactions, media embeds.

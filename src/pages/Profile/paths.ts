@@ -8,7 +8,6 @@ export const paths = (({ slug, id }: { slug?: string | null; id?: string }) => {
     reviews: () => new Path(`${path}/reviews`),
     followers: () => new Path(`${path}/followers`),
     following: () => new Path(`${path}/following`),
-    groups: () => new Path(`${path}/groups`),
     library: (type: string) => new Path(`${path}/library/${type}`),
   });
 }) satisfies PathBuilder;

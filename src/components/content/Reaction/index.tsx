@@ -9,7 +9,7 @@ import Button, { ButtonColor, ButtonKind } from '@/components/controls/Button';
 import { FormattedRelativeTime } from '@/components/Formatted';
 import Card from '@/components/surfaces/Card';
 import { graphql, readFragment, type FragmentOf } from '@/graphql/tada';
-import { paths as profilePaths } from '@/pages/Profile/routes';
+import { paths as profilePaths } from '@/pages/Profile/paths';
 
 import styles from './styles.module.css';
 

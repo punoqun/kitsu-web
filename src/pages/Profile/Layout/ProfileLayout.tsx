@@ -86,16 +86,16 @@ export default function ProfileLayout(props: ProfileLayoutProps) {
                 description="Navigation tab label for a user's profile following page."
               />
             </TabBar.LinkItem>
-            <TabBar.LinkItem to={route.groups()}>
-              <FormattedMessage
-                defaultMessage="Groups"
-                description="Navigation tab label for a user's profile groups page."
-              />
-            </TabBar.LinkItem>
             <TabBar.LinkItem to={route.library('anime')}>
               <FormattedMessage
                 defaultMessage="Anime"
                 description="Navigation tab label for a user's anime library page."
+              />
+            </TabBar.LinkItem>
+            <TabBar.LinkItem to={route.library('manga')}>
+              <FormattedMessage
+                defaultMessage="Manga"
+                description="Navigation tab label for a user's manga library page."
               />
             </TabBar.LinkItem>
           </TabBar>
