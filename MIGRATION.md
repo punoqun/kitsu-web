@@ -53,7 +53,8 @@ edge as each reaches feature parity. Two integration modes already exist in the 
 
 - **content:** `Avatar`, `BannerImage`, `Byline`, `CategoryList`, `CategoryTag`, `Description`,
   `Image`, `PosterImage`, `Reaction`, `Tag`, `Link`, `EpisodeCard`, `ChapterCard`,
-  `MediaPersonCard`, `MediaPosterCard`, `QuoteCard`
+  `MediaPersonCard`, `MediaPosterCard`, `QuoteCard`, `LibraryEntryCard`, `ReviewCard`,
+  `ProfileCard`, `MediaShelf`, `CommentComposer`
 - **controls:** `Button`, `Checkbox`, `Field`, `TextInput`
 - **feedback:** `Alert`, `Spinner`, `EmptyState`, `ErrorState`
 - **surfaces:** `Card` · **navigation:** `TabBar`
@@ -176,8 +177,24 @@ run in parallel once the pattern is proven.
 - User moderation & content-management dashboards — pending (schema-permitting).
 
 ### Phase 9 — Cutover & retirement
-- Flip remaining traffic to V4; retire the Ember app and the `library`/`entry-ember` bridge;
-  remove dual-auth shims; final SSR/perf/a11y/SEO hardening.
+- In-repo V4 surface is now broad enough to begin flipping prefixes. **Cutover-ready** V4 routes
+  (parity built, typecheck/eslint/build/tests green):
+
+  | Prefix | V4 status |
+  | --- | --- |
+  | `/` | ✅ discovery homepage |
+  | `/anime/*`, `/manga/*` | ✅ full verticals |
+  | `/users/*` | ✅ summary + library/reactions/reviews/followers/following |
+  | `/explore/:type`, `/search` | ✅ browse + search |
+  | `/posts/:id` | ✅ post + comments + composer |
+  | `/settings` | ✅ account/profile/password |
+  | `/admin/held`, `/admin/reports` | ✅ moderation |
+  | `/auth/*` | ✅ sign-in/up/forgot (page + modal) |
+
+- **Out-of-repo ops (not actionable here):** the actual edge flip (Cloudflare routing of prefixes
+  → V4), retiring the Ember V3 app, and removing the dual-auth shims live in the edge config / the
+  V3 repo, which are not part of this repository. `public/_headers` only carries security headers.
+- Remaining in-repo hardening: SSR/SEO (deferred, see §2.4), a11y passes, perf/code-split tuning.
 
 ---
 
