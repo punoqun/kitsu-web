@@ -4,8 +4,10 @@ export const paths = (({ slug, id }: { slug?: string | null; id?: string }) => {
   const path = new Path(`/users/${slug ?? id}`);
 
   return pathTree(path, {
+    posts: () => new Path(`${path}/posts`),
     reactions: () => new Path(`${path}/reactions`),
     reviews: () => new Path(`${path}/reviews`),
+    favorites: () => new Path(`${path}/favorites`),
     followers: () => new Path(`${path}/followers`),
     following: () => new Path(`${path}/following`),
     library: (type: string) => new Path(`${path}/library/${type}`),

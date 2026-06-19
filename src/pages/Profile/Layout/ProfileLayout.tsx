@@ -62,6 +62,12 @@ export default function ProfileLayout(props: ProfileLayoutProps) {
                 description="Navigation tab label for a user's profile summary page."
               />
             </TabBar.LinkItem>
+            <TabBar.LinkItem to={route.posts()}>
+              <FormattedMessage
+                defaultMessage="Posts"
+                description="Navigation tab label for a user's profile posts page."
+              />
+            </TabBar.LinkItem>
             <TabBar.LinkItem to={route.reactions()}>
               <FormattedMessage
                 defaultMessage="Reactions"
@@ -72,6 +78,12 @@ export default function ProfileLayout(props: ProfileLayoutProps) {
               <FormattedMessage
                 defaultMessage="Reviews"
                 description="Navigation tab label for a user's profile reviews page."
+              />
+            </TabBar.LinkItem>
+            <TabBar.LinkItem to={route.favorites()}>
+              <FormattedMessage
+                defaultMessage="Favorites"
+                description="Navigation tab label for a user's profile favorites page."
               />
             </TabBar.LinkItem>
             <TabBar.LinkItem to={route.followers()}>
