@@ -79,7 +79,7 @@ function LoggedIn({ profile }: { profile: Account['profile'] }) {
           </li>
           <li>
             <Menu.Link asChild>
-              <NavLink to="/">
+              <NavLink to={paths.admin.reports}>
                 <FormattedMessage
                   id="header.user.admin"
                   defaultMessage="Admin"

@@ -75,7 +75,9 @@ edge as each reaches feature parity. Two integration modes already exist in the 
 | ✅ | `/auth/sign-in`, `/auth/sign-up`, `/auth/forgot-password` | page + modal display modes |
 | ✅ | `/admin/held` | moderation: held content |
 | 🟡 | `/users/:slug` | **Summary, Library dashboard, Reactions, Reviews, Followers, Following all built**; profile `library/:type` supports status filters + media-type. Groups tab dropped (no `Group` type in schema); follow/unfollow deferred (no mutation in schema). |
-| 🟡 | `/posts/:id` | **built** — post + comments list via `findPostById` |
+| ✅ | `/posts/:id` | **built** — post + comments list via `findPostById`; **comment composer** wired (`CommentMutations.create`, auth-gated, refetch on submit) |
+| ✅ | `/settings` | Account + Profile + Password settings (`profile.update`, `account.update`, `account.changePassword`) |
+| ✅ | `/admin/reports` | Moderator reports queue via `reportsByStatus` (status filter tabs, read-only — no report mutation in schema) |
 | 🚧 | `/comments/:id` | placeholder page — schema exposes no `findCommentById` query root yet |
 | ✅ | `LibraryBox` (Add/Edit library, status/progress/rating) | **mutations wired** (create / update status·progress·rating / delete) with optimistic updates + Graphcache `Media.myLibraryEntry` linkage |
 | ✅ | `/` (Home) | Discovery homepage: trending anime/manga shelves (`globalTrending`) via `MediaShelf` |
@@ -144,8 +146,10 @@ run in parallel once the pattern is proven.
 - Library import & management — pending.
 
 ### Phase 4 — Social / Feed vertical
-- Global + user feeds, Post detail, Comment threads + composer, likes/reactions, media embeds.
-- Notifications.
+- ✅ Post detail comment composer (`CommentMutations.create`) — auth-gated, refetches on submit.
+- ⚠️ **Global/user feeds & Notifications are schema-blocked** — the GraphQL API exposes no feed/
+  timeline query root and no notifications root. Post likes are display-only (`PostMutations` has
+  no like/unlike). User posts are available via `Profile.posts` (future profile "Posts" tab).
 
 ### Phase 5 — Discovery
 - ✅ Homepage (`/`) — trending anime/manga shelves via `globalTrending`, reusable `MediaShelf`.
@@ -157,15 +161,19 @@ run in parallel once the pattern is proven.
 - Category/genre browse & seasonal still pending (category titles are localized `Map` fields).
 
 ### Phase 6 — Groups & Messaging
-- Groups: directory, group page, members, group feed, group moderation.
-- Direct messaging / PMs.
+- ⛔ **Blocked — no schema support.** The GraphQL API exposes no `Group`, `GroupMembership`, or
+  messaging/conversation types or query roots. Deferred until the API adds them; the Groups nav
+  entry is a placeholder.
 
 ### Phase 7 — Settings, Account & Onboarding
-- Account / profile / notification / privacy settings, linked accounts, importers (MAL/AniList),
-  onboarding flow.
+- ✅ Settings (`/settings`): Profile (`profile.update`), Account region/rating/SFW/title-language
+  prefs (`account.update`), Change password (`account.changePassword`).
+- Linked accounts (`profileLink`), importers (MAL/AniList), onboarding flow — pending.
 
 ### Phase 8 — Admin / Moderation expansion
-- Beyond held content: reports queue, user moderation, content-management dashboards.
+- ✅ Reports queue (`/admin/reports`) via `reportsByStatus` with status filter tabs (read-only —
+  schema exposes no report-resolution mutation).
+- User moderation & content-management dashboards — pending (schema-permitting).
 
 ### Phase 9 — Cutover & retirement
 - Flip remaining traffic to V4; retire the Ember app and the `library`/`entry-ember` bridge;

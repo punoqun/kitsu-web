@@ -5,10 +5,12 @@ import { useQuery } from 'urql';
 
 import Avatar from '@/components/content/Avatar';
 import Byline from '@/components/content/Byline';
+import { CommentComposer } from '@/components/content/CommentComposer';
 import { ImageFragment } from '@/components/content/Image';
 import { Link } from '@/components/content/Link';
 import { FormattedRelativeTime } from '@/components/Formatted';
 import Card from '@/components/surfaces/Card';
+import { useSession } from '@/contexts/SessionContext';
 import { graphql, readFragment, type FragmentOf } from '@/graphql/tada';
 import NotFoundPage from '@/pages/Errors/NotFound';
 import { paths as profilePaths } from '@/pages/Profile/paths';
@@ -64,10 +66,7 @@ export const PostPageQuery = graphql(
         likes(first: 1) {
           totalCount
         }
-        comments(
-          first: 50
-          sort: [{ on: CREATED_AT, direction: ASCENDING }]
-        ) {
+        comments(first: 50, sort: [{ on: CREATED_AT, direction: ASCENDING }]) {
           totalCount
           nodes {
             id
@@ -210,8 +209,9 @@ function CommentCard({
 export default function PostPage() {
   const { id } = useParams<'id'>();
   invariant(id, 'Missing id on PostPage');
+  const session = useSession();
 
-  const [{ data }] = useQuery({
+  const [{ data }, reexecuteQuery] = useQuery({
     query: PostPageQuery,
     variables: { id },
   });
@@ -240,6 +240,21 @@ export default function PostPage() {
             values={{ count: post.comments.totalCount }}
           />
         </h2>
+        {session.loggedIn ? (
+          <CommentComposer
+            postId={post.id}
+            onCommented={() =>
+              reexecuteQuery({ requestPolicy: 'network-only' })
+            }
+          />
+        ) : (
+          <Card className={styles.commentSignInPrompt}>
+            <FormattedMessage
+              defaultMessage="Sign in to join the discussion."
+              description="Prompt shown instead of the comment composer when a user is signed out."
+            />
+          </Card>
+        )}
         {comments.length > 0 ? (
           <div className={styles.commentList}>
             {comments.map((comment) => (

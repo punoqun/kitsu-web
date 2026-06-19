@@ -14,6 +14,7 @@ import { pages as mangaPages, paths as mangaPaths } from './Manga/routes';
 import { pages as postPages } from './Post/routes';
 import { pages as profilePages, paths as profilePaths } from './Profile/routes';
 import { pages as searchPages, paths as searchPaths } from './Search/routes';
+import { pages as settingsPages, paths as settingsPaths } from './Settings/routes';
 
 export const pages = (
   <>
@@ -27,6 +28,7 @@ export const pages = (
     {commentPages}
     {explorePages}
     {searchPages}
+    {settingsPages}
   </>
 );
 export const modals = <>{authModals}</>;
@@ -38,6 +40,7 @@ export const paths = {
   admin: adminPaths,
   explore: explorePaths,
   search: searchPaths,
+  settings: settingsPaths,
   post: ({ id }: { id: string }) => new Path(`/posts/${id}`),
   comment: ({ id }: { id: string }) => new Path(`/comments/${id}`),
 } satisfies PathBuilder;

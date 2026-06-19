@@ -1,4 +1,12 @@
 {
+  "+0ct+u": {
+    "description": "Rating system preference option.",
+    "message": "Regular"
+  },
+  "+2dvR3": {
+    "description": "Label for account title language select.",
+    "message": "Title Language"
+  },
   "+7akac": {
     "description": "The button to send a password reset email to the user",
     "message": "Send password reset"
@@ -6,6 +14,10 @@
   "+fKH56": {
     "description": "Completed library status label",
     "message": "Completed"
+  },
+  "+hoMek": {
+    "description": "Submit button for profile settings.",
+    "message": "Save Profile"
   },
   "+j2xWz": {
     "message": "Uh oh!"
@@ -18,6 +30,10 @@
     "description": "Explore status filter for all media.",
     "message": "All"
   },
+  "/N9TLF": {
+    "description": "Label for reports resolved by a moderator.",
+    "message": "Resolved"
+  },
   "/TTEe4": {
     "description": "Header for the profile reviews page with the total review count.",
     "message": "Reviews ({count})"
@@ -26,12 +42,20 @@
     "description": "Default description for an error state",
     "message": "Please try again in a few minutes."
   },
+  "/hTPDS": {
+    "description": "SFW filter preference option.",
+    "message": "Only show SFW content"
+  },
   "/iHGFF": {
     "message": "We couldn’t find this page. It may have moved, or it may have disappeared into space."
   },
   "/lqDzH": {
     "description": "Accessible label for the header search form",
     "message": "Site search"
+  },
+  "/piXre": {
+    "description": "Label for account rating system select.",
+    "message": "Rating System"
   },
   "/w5hD8": {
     "description": "Library status filter for completed entries.",
@@ -45,6 +69,10 @@
     "description": "Header for add to library sidebar",
     "message": "Add to Library"
   },
+  "05E+Vb": {
+    "description": "Description for the settings page.",
+    "message": "Manage your Kitsu profile, account preferences, and password."
+  },
   "0HgIPJ": {
     "description": "Library status filter for on hold entries.",
     "message": "On Hold"
@@ -57,9 +85,21 @@
     "description": "Button label linking users to browse anime",
     "message": "Browse anime"
   },
+  "1wLwsD": {
+    "description": "Error state shown when the reports queue fails to load.",
+    "message": "Reports could not be loaded."
+  },
   "23nBMz": {
     "description": "Empty state shown when a profile library status has no entries.",
     "message": "No library entries found for this status."
+  },
+  "2bInHT": {
+    "description": "Link text to sign in from settings.",
+    "message": "Sign in"
+  },
+  "2rl0vx": {
+    "description": "Prompt shown instead of the comment composer when a user is signed out.",
+    "message": "Sign in to join the discussion."
   },
   "39AHJm": {
     "message": "Sign Up"
@@ -71,6 +111,14 @@
   "4fOMaL": {
     "description": "Search page title showing the user's search query.",
     "message": "Results for “{query}”"
+  },
+  "4ivVlh": {
+    "description": "Message shown when a user lacks permission to view the reports queue.",
+    "message": "You are not authorized to view reports."
+  },
+  "4vcRw8": {
+    "description": "Label for account SFW filter select.",
+    "message": "SFW Filter"
   },
   "53eNgd": {
     "message": "OVA"
@@ -87,6 +135,14 @@
     "description": "Action button to mark show as seen",
     "message": "Completed"
   },
+  "5Ne/WI": {
+    "description": "Report reason label for another reason.",
+    "message": "Other"
+  },
+  "5OUnrG": {
+    "description": "Submit button label for the comment composer.",
+    "message": "Post comment"
+  },
   "5tG5YI": {
     "description": "Navigation tab label for a user's profile reviews page.",
     "message": "Reviews"
@@ -98,16 +154,36 @@
   "6/aEFZ": {
     "message": "Upcoming"
   },
+  "6L3bWd": {
+    "description": "Report reason label for bullying.",
+    "message": "Bullying"
+  },
   "6eSD2w": {
     "description": "Button label for retrying after an error",
     "message": "Try again"
   },
+  "6eeNz+": {
+    "description": "Title language preference option.",
+    "message": "Romanized"
+  },
+  "6fksvH": {
+    "description": "Accessible label for the admin report status filter tabs.",
+    "message": "Report status filters"
+  },
   "79lLl+": {
     "message": "Music"
+  },
+  "7CJPaq": {
+    "description": "Heading for the admin reports queue with the total report count.",
+    "message": "Reports ({count})"
   },
   "7Rhjat": {
     "description": "Navigation tab label for a user's profile summary page.",
     "message": "Summary"
+  },
+  "7YMtjZ": {
+    "description": "Submit button for changing account password.",
+    "message": "Change Password"
   },
   "7gMmSL": {
     "message": "Reaction"
@@ -123,6 +199,10 @@
   "8XlI+o": {
     "message": "by <b>{name}</b>"
   },
+  "8ch3cW": {
+    "description": "Label for password confirmation input.",
+    "message": "Confirm New Password"
+  },
   "8qSoHp": {
     "description": "Heading for trending manga media in a shelf.",
     "message": "Trending Manga"
@@ -130,8 +210,16 @@
   "947e44": {
     "message": "One-shot"
   },
+  "96X5kf": {
+    "description": "Title language preference option.",
+    "message": "Localized"
+  },
   "9HuwR0": {
     "message": "by <b>{name}</b> - {time}"
+  },
+  "9j5bg1": {
+    "description": "Fallback shown when a reported comment has no content.",
+    "message": "No comment content available."
   },
   "A/NY5B": {
     "description": "Heading for a shelf of globally trending manga.",
@@ -157,6 +245,14 @@
     "description": "Empty state for the trending anime shelf.",
     "message": "No anime is trending right now."
   },
+  "BiopD1": {
+    "description": "Generic error shown when creating a comment fails.",
+    "message": "We could not post your comment. Please try again."
+  },
+  "BzBrgP": {
+    "description": "Prompt shown when a signed-out user opens settings.",
+    "message": "Please sign in to manage your settings."
+  },
   "CHVTCY": {
     "description": "Button label to load more profile reviews.",
     "message": "Load more"
@@ -165,9 +261,21 @@
     "description": "Empty state heading for an empty media library",
     "message": "No library entries yet"
   },
+  "CZwkGh": {
+    "description": "Label for new password input.",
+    "message": "New Password"
+  },
+  "ClA0oV": {
+    "description": "Label for the comment composer text field.",
+    "message": "Add a comment"
+  },
   "CwOkZL": {
     "description": "Button to increment library entry progress",
     "message": "Increase Progress"
+  },
+  "DWtQzJ": {
+    "description": "Report reason label for spam.",
+    "message": "Spam"
   },
   "DZM26f": {
     "description": "Error message when a sign in fails ",
@@ -182,6 +290,14 @@
   },
   "Dm5O3W": {
     "message": "{time} ago"
+  },
+  "E5iiZ8": {
+    "description": "Byline showing which user submitted a report.",
+    "message": "Reported by {reporter}"
+  },
+  "EA9tk+": {
+    "description": "Fallback shown when a reported post has no content.",
+    "message": "No post content available."
   },
   "EQk6BS": {
     "description": "Explore status filter for finished media.",
@@ -215,9 +331,25 @@
     "description": "Library entry rating out of ten.",
     "message": "{rating}/10"
   },
+  "GjLEqH": {
+    "description": "Heading for the explanation a reporter supplied.",
+    "message": "Explanation"
+  },
   "GjSYUW": {
     "description": "Suffix for a review rating out of ten.",
     "message": "/10"
+  },
+  "H6dg+6": {
+    "description": "Admin reports status filter for unresolved reported reports.",
+    "message": "Reported"
+  },
+  "HIZC+k": {
+    "description": "Error message when profile settings are unavailable.",
+    "message": "We couldn't load your profile settings."
+  },
+  "HIprQG": {
+    "description": "Admin reports status filter for declined reports.",
+    "message": "Declined"
   },
   "Hk17OG": {
     "description": "Homepage hero description for the discovery landing page.",
@@ -226,6 +358,10 @@
   "HuniCG": {
     "description": "Heading for a shelf of globally trending anime.",
     "message": "Trending Anime"
+  },
+  "I+D3q3": {
+    "description": "Success message after changing password.",
+    "message": "Password changed."
   },
   "I5otxe": {
     "description": "Accessibility label for modal close button",
@@ -249,8 +385,20 @@
   "JlkfMk": {
     "message": "OEL"
   },
+  "JoCiRp": {
+    "description": "Page title for account settings.",
+    "message": "Settings"
+  },
   "K3r6DQ": {
     "message": "Delete"
+  },
+  "K7oL+e": {
+    "description": "Label for reports declined by a moderator.",
+    "message": "Declined"
+  },
+  "KGv1As": {
+    "description": "Button label to load more reports.",
+    "message": "Load more"
   },
   "KLtzjo": {
     "description": "Label for the number of users following a profile.",
@@ -277,12 +425,28 @@
   "Mqiqij": {
     "message": "by <b>{name}</b> &middot; {time}"
   },
+  "Mvm3eY": {
+    "description": "Label for a reported review.",
+    "message": "Review #{id}"
+  },
+  "N4T363": {
+    "description": "Report reason label for not safe for work content.",
+    "message": "NSFW"
+  },
   "NPktLp": {
     "description": "Submit button for Sign In",
     "message": "Log in"
   },
+  "NfFfjJ": {
+    "description": "SFW filter preference option.",
+    "message": "Show NSFW sometimes"
+  },
   "NfP2Dc": {
     "message": "Anime"
+  },
+  "NpCJrA": {
+    "description": "Admin reports status filter for all reports.",
+    "message": "All"
   },
   "OHGo/v": {
     "description": "Heading for the comments list on a post detail page.",
@@ -291,6 +455,10 @@
   "OPfQ3b": {
     "description": "Library status filter for dropped entries.",
     "message": "Dropped"
+  },
+  "OPgq85": {
+    "description": "Settings section title for profile settings.",
+    "message": "Profile"
   },
   "OfXLMt": {
     "description": "Explore status filter for currently airing anime or current manga.",
@@ -316,6 +484,18 @@
     "description": "Accessible label for the library status filter tabs.",
     "message": "Library status filters"
   },
+  "QXqg6y": {
+    "description": "Report reason label for spoiler content.",
+    "message": "Spoiler"
+  },
+  "QcNrFn": {
+    "description": "Accessible label for the comment composer text area.",
+    "message": "Add a comment"
+  },
+  "QkE3c7": {
+    "description": "Label for current password input.",
+    "message": "Current Password"
+  },
   "Qr2Fyt": {
     "description": "Planned anime library status label",
     "message": "Want to Watch"
@@ -323,6 +503,10 @@
   "RAnASR": {
     "description": "Header for library entry edit sidebar",
     "message": "Edit Library"
+  },
+  "RECnKc": {
+    "description": "Rating system preference option.",
+    "message": "Simple"
   },
   "ROyeAE": {
     "description": "Placeholder for current password input on Sign In",
@@ -377,6 +561,14 @@
   "UsvJ1S": {
     "message": "ONA"
   },
+  "VIDY8s": {
+    "description": "Success message after saving profile settings.",
+    "message": "Profile saved."
+  },
+  "VLIPQY": {
+    "description": "Fallback shown when a report has no explanation.",
+    "message": "No explanation provided."
+  },
   "VNvR3z": {
     "description": "Placeholder shown when a profile has no biography.",
     "message": "This user has not written a bio yet."
@@ -395,12 +587,36 @@
   "WkWZIb": {
     "message": "Manhua"
   },
+  "Wlm9WE": {
+    "description": "Heading for the item attached to a report.",
+    "message": "Reported item"
+  },
+  "WzM+HZ": {
+    "description": "Settings section title for account preferences.",
+    "message": "Account"
+  },
+  "XGPdZy": {
+    "description": "Label for profile display name input.",
+    "message": "Name"
+  },
   "XhJgDw": {
     "description": "Heading for the anime explore page.",
     "message": "Explore Anime"
   },
+  "YF31Eu": {
+    "description": "Admin reports status filter for resolved reports.",
+    "message": "Resolved"
+  },
+  "YjTtPv": {
+    "description": "Fallback shown when a report no longer has a reported item.",
+    "message": "No reported item is attached to this report."
+  },
   "ZfAWFL": {
     "message": "TBA"
+  },
+  "aAJ4Vs": {
+    "description": "Submit button for account preferences.",
+    "message": "Save Account"
   },
   "about.header": {
     "description": "about -> header",
@@ -473,6 +689,10 @@
     "description": "Alternative text for a post author avatar.",
     "message": "{name}'s avatar"
   },
+  "bZeZx7": {
+    "description": "Label for profile bio input.",
+    "message": "About"
+  },
   "button.view-all": {
     "description": "button -> view-all",
     "message": "view all"
@@ -480,6 +700,10 @@
   "c0e4eD": {
     "description": "Dropped library status label",
     "message": "Dropped"
+  },
+  "cFXXif": {
+    "description": "SFW filter preference option.",
+    "message": "Show NSFW everywhere"
   },
   "category.absurdist-humour": {
     "description": "category -> absurdist-humour",
@@ -1901,6 +2125,10 @@
     "description": "Fallback text when a post or comment has no body content.",
     "message": "No content was provided."
   },
+  "d1DrNe": {
+    "description": "Label for reports that have not been moderated yet.",
+    "message": "Reported"
+  },
   "dQTbJk": {
     "description": "Navigation tab label for a user's manga library page.",
     "message": "Manga"
@@ -2027,8 +2255,20 @@
   "e3awX5": {
     "message": "Something went wrong, why don't you try that again in a few minutes?"
   },
+  "e4IqKf": {
+    "description": "Title language preference option.",
+    "message": "Canonical"
+  },
+  "e96XJU": {
+    "description": "Link label for a reported comment.",
+    "message": "Comment #{id}"
+  },
   "eKv7yX": {
     "message": "Post"
+  },
+  "ebO8/M": {
+    "description": "Label for account region input.",
+    "message": "Region"
   },
   "errors.accepted": {
     "description": "errors -> accepted",
@@ -3153,6 +3393,10 @@
     "description": "groups -> tickets -> search",
     "message": "Search Tickets"
   },
+  "he3gPA": {
+    "description": "Label for the reason a report was submitted.",
+    "message": "Reason"
+  },
   "head.users.description": {
     "description": "head -> users -> description",
     "message": "{user} is using Kitsu to track their progress and share their anime & manga experiences."
@@ -3242,6 +3486,10 @@
   },
   "j9Xe+y": {
     "message": "Uh oh, you're lost!"
+  },
+  "jcmnCL": {
+    "description": "Validation error for mismatched password confirmation.",
+    "message": "New passwords do not match."
   },
   "jq0w1U": {
     "message": "{count, plural, one {# Chapter} other {# Chapters}}"
@@ -3400,6 +3648,10 @@
   "mCsgfX": {
     "description": "Heading shown when the comment detail page cannot query a comment by ID.",
     "message": "Comment details are unavailable"
+  },
+  "mKt7lW": {
+    "description": "Report reason label for offensive content.",
+    "message": "Offensive"
   },
   "media-reaction.edit": {
     "description": "media-reaction -> edit",
@@ -4497,6 +4749,10 @@
     "description": "notifications -> none",
     "message": "You don't have any notifications!"
   },
+  "o+LKzh": {
+    "description": "Rating system preference option.",
+    "message": "Advanced"
+  },
   "o2cdpP": {
     "description": "Navigation tab label for a user's profile groups page.",
     "message": "Groups"
@@ -4585,9 +4841,17 @@
     "description": "onboarding -> checklist -> steps",
     "message": "{count} steps left! 🦊"
   },
+  "oxEiSL": {
+    "description": "Placeholder text for the comment composer.",
+    "message": "Write a comment…"
+  },
   "pJ7zxG": {
     "description": "Library status filter for current entries.",
     "message": "Current"
+  },
+  "pJDpZW": {
+    "description": "Settings section title for password settings.",
+    "message": "Password"
   },
   "password-reset.confirm": {
     "description": "password-reset -> confirm",
@@ -4617,6 +4881,10 @@
     "description": "Button label to load more search results.",
     "message": "Load more"
   },
+  "pvkeuR": {
+    "description": "Link label for a reported media reaction.",
+    "message": "Media reaction #{id}"
+  },
   "q4Xths": {
     "description": "Library entry progress count.",
     "message": "Progress {progress}"
@@ -4636,6 +4904,10 @@
   "qlani8": {
     "description": "Label for the number of likes on a post or comment.",
     "message": "Likes"
+  },
+  "rJHFbd": {
+    "description": "Loading state shown while the admin reports page checks permissions.",
+    "message": "Loading reports…"
   },
   "rPlfdS": {
     "description": "Library status filter for all entries.",
@@ -6309,9 +6581,17 @@
     "description": "Button label to load more explore results.",
     "message": "Load more"
   },
+  "vgIo4q": {
+    "description": "Success message after saving account settings.",
+    "message": "Account preferences saved."
+  },
   "wCEJoX": {
     "description": "Empty state shown when the anime explore page has no results for a status.",
     "message": "No anime found for this status."
+  },
+  "wKhKLO": {
+    "description": "Label for a report status.",
+    "message": "Status"
   },
   "wMVcyT": {
     "message": "Doujin"
@@ -6334,6 +6614,18 @@
   "y2T3ju": {
     "description": "Hover text for Apple sign in button",
     "message": "Log in with Apple"
+  },
+  "yCqv+M": {
+    "description": "Label for account time zone input.",
+    "message": "Time Zone"
+  },
+  "yL3BcU": {
+    "description": "Empty state shown when an admin report status has no reports.",
+    "message": "No reports found for this status."
+  },
+  "z01x4Z": {
+    "description": "Link label for a reported post.",
+    "message": "Post #{id}"
   },
   "z57OMq": {
     "description": "Heading for trending anime media in a shelf.",
