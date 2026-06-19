@@ -16,16 +16,16 @@ export const ProfileSummaryPageQuery = graphql(
       findProfile: findProfileBySlug(slug: $slug) {
         ...ProfileLayoutFragment
         about
-        followers {
+        followers(first: 1) {
           totalCount
         }
-        following {
+        following(first: 1) {
           totalCount
         }
-        mediaReactions {
+        mediaReactions(first: 1) {
           totalCount
         }
-        reviews {
+        reviews(first: 1) {
           totalCount
         }
       }

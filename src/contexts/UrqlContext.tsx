@@ -29,7 +29,9 @@ export default function UrqlContext({
           fetchExchange,
         ],
         url: `${apiHost}api/graphql`,
+        preferGetMethod: false,
         fetchOptions: {
+          method: 'POST',
           headers: { 'Accept-Language': buildAcceptLanguage(locale) },
         },
       }),
