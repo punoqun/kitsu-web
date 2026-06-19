@@ -7,8 +7,10 @@ import {
   pages as authPages,
   paths as authPaths,
 } from './Auth/routes';
+import { pages as commentPages } from './Comment/routes';
 import { pages as mangaPages, paths as mangaPaths } from './Manga/routes';
-import { paths as profilePaths } from './Profile/routes';
+import { pages as postPages } from './Post/routes';
+import { pages as profilePages, paths as profilePaths } from './Profile/routes';
 
 export const pages = (
   <>
@@ -16,6 +18,9 @@ export const pages = (
     {animePages}
     {mangaPages}
     {adminPages}
+    {profilePages}
+    {postPages}
+    {commentPages}
   </>
 );
 export const modals = <>{authModals}</>;

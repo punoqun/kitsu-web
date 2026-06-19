@@ -7,3 +7,35 @@
 .libraryButton {
   padding-inline: 0;
 }
+
+.libraryField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.libraryLabel {
+  color: var(--group-box-title-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.librarySelect {
+  inline-size: 100%;
+}
+
+.libraryMeta {
+  margin-block: 0;
+}
+
+.libraryActions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.errorMessage {
+  color: var(--alert-error-text-color);
+  margin-block: 0;
+}

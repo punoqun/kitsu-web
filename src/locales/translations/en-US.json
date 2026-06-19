@@ -3,18 +3,38 @@
     "description": "The button to send a password reset email to the user",
     "message": "Send password reset"
   },
+  "+fKH56": {
+    "description": "Completed library status label",
+    "message": "Completed"
+  },
   "+j2xWz": {
     "message": "Uh oh!"
   },
+  "/YNCii": {
+    "description": "Default description for an error state",
+    "message": "Please try again in a few minutes."
+  },
   "/iHGFF": {
     "message": "We couldn’t find this page. It may have moved, or it may have disappeared into space."
+  },
+  "/zKOE0": {
+    "description": "Number of replies to a comment.",
+    "message": "{count, plural, one {# reply} other {# replies}}"
   },
   "02qIOS": {
     "description": "Header for add to library sidebar",
     "message": "Add to Library"
   },
+  "13A1WF": {
+    "description": "Button label linking users to browse anime",
+    "message": "Browse anime"
+  },
   "39AHJm": {
     "message": "Sign Up"
+  },
+  "4cEgTg": {
+    "description": "Navigation tab label for a user's profile followers page.",
+    "message": "Followers"
   },
   "53eNgd": {
     "message": "OVA"
@@ -23,14 +43,34 @@
     "description": "Action button to mark show as seen",
     "message": "Completed"
   },
+  "5tG5YI": {
+    "description": "Navigation tab label for a user's profile reviews page.",
+    "message": "Reviews"
+  },
+  "5upSQF": {
+    "description": "Navigation tab label for a user's anime library page.",
+    "message": "Anime"
+  },
   "6/aEFZ": {
     "message": "Upcoming"
+  },
+  "6eSD2w": {
+    "description": "Button label for retrying after an error",
+    "message": "Try again"
   },
   "79lLl+": {
     "message": "Music"
   },
+  "7Rhjat": {
+    "description": "Navigation tab label for a user's profile summary page.",
+    "message": "Summary"
+  },
   "7gMmSL": {
     "message": "Reaction"
+  },
+  "8Kb0pq": {
+    "description": "Empty state description explaining where library entries appear",
+    "message": "Add anime or manga to your library and they will appear here."
   },
   "8XlI+o": {
     "message": "by <b>{name}</b>"
@@ -40,6 +80,22 @@
   },
   "9HuwR0": {
     "message": "by <b>{name}</b> - {time}"
+  },
+  "A/e55o": {
+    "description": "Current manga library status label",
+    "message": "Reading"
+  },
+  "Aa3Q/Y": {
+    "description": "Explanation shown when the comment detail page has no GraphQL query root available.",
+    "message": "Comment {id} cannot be loaded because the GraphQL schema does not expose a single-comment lookup yet."
+  },
+  "CWI0ZF": {
+    "description": "Empty state heading for an empty media library",
+    "message": "No library entries yet"
+  },
+  "CwOkZL": {
+    "description": "Button to increment library entry progress",
+    "message": "Increase Progress"
   },
   "DZM26f": {
     "description": "Error message when a sign in fails ",
@@ -58,6 +114,10 @@
   "EQpfkS": {
     "message": "Finished"
   },
+  "EXAiiH": {
+    "description": "Fallback text when a post has no comments.",
+    "message": "No comments yet."
+  },
   "EiUj76": {
     "message": "Manga"
   },
@@ -67,9 +127,17 @@
   "FacQBr": {
     "message": "Send password reset"
   },
+  "FrcwJ1": {
+    "description": "Default heading for an empty content state",
+    "message": "Nothing to show yet"
+  },
   "I5otxe": {
     "description": "Accessibility label for modal close button",
     "message": "Close"
+  },
+  "IF0ROF": {
+    "description": "Empty state heading shown when a search has no matches",
+    "message": "No results found"
   },
   "JEddDG": {
     "message": "load more"
@@ -79,6 +147,10 @@
   },
   "K3r6DQ": {
     "message": "Delete"
+  },
+  "KLtzjo": {
+    "description": "Label for the number of users following a profile.",
+    "message": "Followers"
   },
   "LgbKvU": {
     "message": "Comment"
@@ -96,6 +168,18 @@
   "NfP2Dc": {
     "message": "Anime"
   },
+  "OHGo/v": {
+    "description": "Heading for the comments list on a post detail page.",
+    "message": "{count, plural, one {# comment} other {# comments}}"
+  },
+  "PY58GN": {
+    "description": "Navigation tab label for a user's profile reactions page.",
+    "message": "Reactions"
+  },
+  "Qr2Fyt": {
+    "description": "Planned anime library status label",
+    "message": "Want to Watch"
+  },
   "RAnASR": {
     "description": "Header for library entry edit sidebar",
     "message": "Edit Library"
@@ -103,6 +187,10 @@
   "ROyeAE": {
     "description": "Placeholder for current password input on Sign In",
     "message": "Password"
+  },
+  "RSfrvN": {
+    "description": "Heading for the profile biography section.",
+    "message": "About"
   },
   "RfnGLg": {
     "description": "Action button to mark book as started",
@@ -116,6 +204,10 @@
   },
   "UsvJ1S": {
     "message": "ONA"
+  },
+  "VNvR3z": {
+    "description": "Placeholder shown when a profile has no biography.",
+    "message": "This user has not written a bio yet."
   },
   "VuzjdC": {
     "message": "Ongoing"
@@ -182,12 +274,24 @@
     "description": "auth-modal -> sign-up -> submit",
     "message": "{step, select, 0 {Let's get some basic info first} 1 {Very witty - email is next!} 2 {Looks legit, how about a password?} 3 {Cool- Let's create that account} other {}}"
   },
+  "b5S2nP": {
+    "description": "Number of likes on a post or comment.",
+    "message": "{count, plural, one {# like} other {# likes}}"
+  },
   "bQJzuv": {
     "message": "Manhwa"
+  },
+  "bQX79m": {
+    "description": "Alternative text for a post author avatar.",
+    "message": "{name}'s avatar"
   },
   "button.view-all": {
     "description": "button -> view-all",
     "message": "view all"
+  },
+  "c0e4eD": {
+    "description": "Dropped library status label",
+    "message": "Dropped"
   },
   "category.absurdist-humour": {
     "description": "category -> absurdist-humour",
@@ -1605,6 +1709,10 @@
     "description": "components -> users -> you",
     "message": "Hey, that's you!"
   },
+  "d00IPh": {
+    "description": "Fallback text when a post or comment has no body content.",
+    "message": "No content was provided."
+  },
   "dS5WGz": {
     "message": "by <b>{name}</b> - {time} ago"
   },
@@ -2112,6 +2220,14 @@
   },
   "gTB0E8": {
     "message": "Special"
+  },
+  "gXGAWw": {
+    "description": "Button to remove an entry from the user's library",
+    "message": "Remove from Library"
+  },
+  "gcFgRN": {
+    "description": "Heading for profile summary statistics.",
+    "message": "Stats"
   },
   "group-invite.accept": {
     "description": "group-invite -> accept",
@@ -2904,6 +3020,14 @@
   "huqKGl": {
     "message": "Create account"
   },
+  "iDf8dA": {
+    "description": "Label for the number of media reactions written by a profile.",
+    "message": "Reactions"
+  },
+  "iX1+Em": {
+    "description": "Placeholder for an unrated library entry",
+    "message": "Not Rated"
+  },
   "image-form.help-text": {
     "description": "image-form -> help-text",
     "message": "Click here to select an image."
@@ -2911,6 +3035,10 @@
   "j2kOID": {
     "description": "Link to password reset page from sign in form",
     "message": "Forgot Password?"
+  },
+  "j3KxyM": {
+    "description": "Label for the number of reviews written by a profile.",
+    "message": "Reviews"
   },
   "j9Xe+y": {
     "message": "Uh oh, you're lost!"
@@ -2921,6 +3049,14 @@
   "k8V5GT": {
     "description": "Action button to mark show as want to watch",
     "message": "Want to Watch"
+  },
+  "kk4ydW": {
+    "description": "Planned manga library status label",
+    "message": "Want to Read"
+  },
+  "km0TsN": {
+    "description": "Current anime library status label",
+    "message": "Watching"
   },
   "kruAAo": {
     "description": "Generic error message when a sign in fails",
@@ -3052,6 +3188,10 @@
   "loading": {
     "description": "loading",
     "message": "Loading {subject, select, episode {Episode} chapter {Chapter} episodes {Episodes} chapters {Chapters} other {}}…"
+  },
+  "mCsgfX": {
+    "description": "Heading shown when the comment detail page cannot query a comment by ID.",
+    "message": "Comment details are unavailable"
   },
   "media-reaction.edit": {
     "description": "media-reaction -> edit",
@@ -4149,6 +4289,26 @@
     "description": "notifications -> none",
     "message": "You don't have any notifications!"
   },
+  "o2cdpP": {
+    "description": "Navigation tab label for a user's profile groups page.",
+    "message": "Groups"
+  },
+  "oElJ1s": {
+    "description": "On hold library status label",
+    "message": "On Hold"
+  },
+  "oQq1+x": {
+    "description": "Label for changing library entry rating",
+    "message": "Rating"
+  },
+  "oW0KpN": {
+    "description": "Text showing the current library entry progress",
+    "message": "Progress: {progress}"
+  },
+  "okjf+s": {
+    "description": "Empty state description suggesting ways to find search results",
+    "message": "Try changing your filters or searching for something else."
+  },
   "onboarding.aozora-account-details.submit": {
     "description": "onboarding -> aozora-account-details -> submit",
     "message": "Looks Good!"
@@ -4245,6 +4405,14 @@
     "description": "Placeholder for email input on Sign In",
     "message": "Email"
   },
+  "ql4RCi": {
+    "description": "Text showing the current library entry status",
+    "message": "Current status: {status}"
+  },
+  "qlani8": {
+    "description": "Label for the number of likes on a post or comment.",
+    "message": "Likes"
+  },
   "reaction-modal.delete": {
     "description": "reaction-modal -> delete",
     "message": "Delete Reaction"
@@ -4272,9 +4440,17 @@
   "rsVC/h": {
     "message": "Unreleased"
   },
+  "rtm1+i": {
+    "description": "Default heading for an error state",
+    "message": "Something went wrong"
+  },
   "s6lf7V": {
     "description": "Hover text for Facebook sign in button",
     "message": "Log in with Facebook"
+  },
+  "sB8Tzf": {
+    "description": "Navigation tab label for a user's profile following page.",
+    "message": "Following"
   },
   "selects.loading": {
     "description": "selects -> loading",
@@ -4739,6 +4915,10 @@
   "settings.privacy.update": {
     "description": "settings -> privacy -> update",
     "message": "Update Profile"
+  },
+  "sjl2+i": {
+    "description": "Label for the number of users this profile follows.",
+    "message": "Following"
   },
   "t20QRC": {
     "message": "by <b>{author}</b>"
@@ -5876,8 +6056,16 @@
   "wMVcyT": {
     "message": "Doujin"
   },
+  "x9kpoz": {
+    "description": "Label for the number of replies to a comment.",
+    "message": "Replies"
+  },
   "xvlEcu": {
     "message": "{score} Spam"
+  },
+  "xxcke9": {
+    "description": "Label for changing library entry status",
+    "message": "Status"
   },
   "y2T3ju": {
     "description": "Hover text for Apple sign in button",

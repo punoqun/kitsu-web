@@ -1,0 +1,59 @@
+.page {
+  display: grid;
+  gap: 1rem;
+  margin-inline: auto;
+  max-inline-size: 48rem;
+  padding: 1rem;
+}
+
+.postCard,
+.commentCard,
+.emptyComments {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.content {
+  white-space: pre-wrap;
+}
+
+.emptyContent,
+.emptyComments {
+  color: var(--color-text-muted);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block: 0;
+}
+
+.stats div {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.stats dt {
+  font-weight: 600;
+}
+
+.stats dd {
+  margin-inline-start: 0;
+}
+
+.commentsSection {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.commentsTitle {
+  font-size: 1.25rem;
+  margin-block: 0;
+}
+
+.commentList {
+  display: grid;
+  gap: 0.75rem;
+}

@@ -38,13 +38,14 @@ edge as each reaches feature parity. Two integration modes already exist in the 
 
 - **Build:** Vite 8, two targets via `BUILD_TARGET` (`client` / `library`).
 - **Data:** urql + Graphcache (normalized cache), `gql.tada` typed GraphQL, custom scalars,
-  cache resolvers (`src/graphql/resolvers.ts`), optimistic mutations (currently `MediaReaction`),
+  cache resolvers (`src/graphql/resolvers.ts`), optimistic mutations (`MediaReaction`, `LibraryEntry`),
   auth + cache urql exchanges.
 - **Auth / session:** `@nanoauth/*`, `SessionContext`, `AccountContext`, `oauth2-callback.html`.
 - **i18n:** `react-intl` + Crowdin sync, `codegen:intl` extraction. Literal-string ESLint gate.
 - **Theming / styling:** `theme-init`, `LayoutSettingsContext`, design tokens in
   `src/styles/globals`, PostCSS pipeline, logical-property enforcement.
-- **Routing:** react-router v6, typed path builders (`Path` / `pathTree` in `src/utils/routes`),
+- **Routing:** react-router v8 (`react-router-dom` removed — import all routing APIs from
+  `react-router`), typed path builders (`Path` / `pathTree` in `src/utils/routes`),
   modal-over-background pattern in `src/Router.tsx`.
 - **Quality tooling:** Storybook 8, Vitest + RTL, Cypress, ESLint/Prettier/Stylelint, Sentry.
 
@@ -54,14 +55,14 @@ edge as each reaches feature parity. Two integration modes already exist in the 
   `Image`, `PosterImage`, `Reaction`, `Tag`, `Link`, `EpisodeCard`, `ChapterCard`,
   `MediaPersonCard`, `MediaPosterCard`, `QuoteCard`
 - **controls:** `Button`, `Checkbox`, `Field`, `TextInput`
-- **feedback:** `Alert`, `Spinner`
+- **feedback:** `Alert`, `Spinner`, `EmptyState`, `ErrorState`
 - **surfaces:** `Card` · **navigation:** `TabBar`
 - **shell / misc:** `Header`, `Layout`, `Modal`, `Dropdown`, `GroupBox`, `Section`, `Rule`,
-  `Toaster`, `Formatted` (Subtype, EpisodeCount, ChapterCount, ReleaseStatus, RelativeTime),
-  `ModalLink`, `AuthModalHeader`
+  `Toaster`, `RouteErrorBoundary`, `Formatted` (Subtype, EpisodeCount, ChapterCount,
+  ReleaseStatus, RelativeTime), `ModalLink`, `AuthModalHeader`
 - **Notable gaps:** richer form controls (select, radio, textarea, file/image upload), media
   cards & grids, pagination / infinite scroll, comment & post composer, rating widget, menus,
-  tooltips, skeleton loaders, empty/error states, data tables.
+  tooltips, skeleton loaders, data tables.
 
 ### 2.3 Pages — Anime & Manga verticals complete 🟢 / rest pending 🔴
 
@@ -73,9 +74,10 @@ edge as each reaches feature parity. Two integration modes already exist in the 
 | ✅ | `/manga/:slug/{chapters,chapters/:n,characters,staff,reactions,franchise,quotes,quotes/:id}` | **all built** — full Manga vertical, mirrors Anime |
 | ✅ | `/auth/sign-in`, `/auth/sign-up`, `/auth/forgot-password` | page + modal display modes |
 | ✅ | `/admin/held` | moderation: held content |
-| 🚧 | `/users/:slug/{reactions,reviews,followers,following,groups,library/:type}` | path builders exist, **pages not built** |
-| 🚧 | `/posts/:id`, `/comments/:id` | path builders exist, **pages not built** |
-| 🟡 | `LibraryBox` (Add/Edit library, status/progress/rating) | UI present on Anime/Manga sidebars but **mutations not wired** (display-only) |
+| 🟡 | `/users/:slug` | **Summary built** (`ProfileLayout` + bio/stats via `findProfileBySlug`); tabs (reactions, reviews, followers, following, groups, library/:type) still pending |
+| 🟡 | `/posts/:id` | **built** — post + comments list via `findPostById` |
+| 🚧 | `/comments/:id` | placeholder page — schema exposes no `findCommentById` query root yet |
+| ✅ | `LibraryBox` (Add/Edit library, status/progress/rating) | **mutations wired** (create / update status·progress·rating / delete) with optimistic updates + Graphcache `Media.myLibraryEntry` linkage |
 | ❌ | Library dashboard, Browse/Explore, Search, Feed, Groups, Settings, Notifications, Messaging, Homepage, Onboarding | not started |
 
 Root `/` and any unmatched path render `NotFound` by design (`*` route in `src/Router.tsx`).
@@ -119,8 +121,8 @@ run in parallel once the pattern is proven.
 ### Phase 1 — Anime vertical (proves the pattern)
 - ✅ Built all remaining Anime tabs: Episodes, Episode detail, Characters, Staff, Reactions,
   Franchise, Quotes, Quote detail.
-- Library actions on media (status / progress / rating) wired end-to-end via `LibraryBox` +
-  optimistic mutations; reaction composer + voting. **(LibraryBox UI exists; mutations still TODO.)**
+- ✅ Library actions on media (status / progress / rating / delete) wired end-to-end via
+  `LibraryBox` + optimistic mutations. Reaction composer + voting still TODO.
 - Flip `/anime/*` to V4 at the edge; retire V3 anime routes.
 
 ### Phase 2 — Manga + Media generalization
@@ -130,8 +132,9 @@ run in parallel once the pattern is proven.
   Chapter detail, Characters, Staff, Reactions, Franchise, Quotes, Quote detail.
 
 ### Phase 3 — User / Profile vertical
-- Profile summary; **Library dashboard** (filter/sort/status columns, progress, bulk edit — core
-  retention surface); Reactions; Reviews; Followers / Following; Groups tab.
+- 🚧 Profile summary **started** (`/users/:slug` — `ProfileLayout` + bio/stats); **Library
+  dashboard** (filter/sort/status columns, progress, bulk edit — core retention surface);
+  Reactions; Reviews; Followers / Following; Groups tab.
 - Follow/unfollow, library import & management.
 
 ### Phase 4 — Social / Feed vertical

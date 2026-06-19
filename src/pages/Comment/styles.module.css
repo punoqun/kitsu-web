@@ -1,0 +1,20 @@
+.page {
+  margin-inline: auto;
+  max-inline-size: 42rem;
+  padding: 1rem;
+}
+
+.card {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-block: 0;
+}
+
+.message {
+  margin-block: 0;
+}
